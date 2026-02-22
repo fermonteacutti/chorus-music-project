@@ -245,7 +245,7 @@ function PostForm({ post, categories, onSave, onCancel, saving }: any) {
             <Textarea id="excerpt" value={excerpt} onChange={(e) => setExcerpt(e.target.value)} rows={2} required />
           </div>
           <div>
-            <Label htmlFor="content">Conteúdo (HTML)</Label>
+            <Label htmlFor="content">Conteúdo (Markdown)</Label>
             <Textarea id="content" value={content} onChange={(e) => setContent(e.target.value)} rows={12} required className="font-mono text-sm" />
           </div>
           <div className="flex items-center gap-2">
