@@ -61,7 +61,13 @@ export default function BlogPost() {
             <div className="flex items-center gap-2"><Calendar className="h-4 w-4" /><span>{new Date(post.created_at).toLocaleDateString("pt-BR")}</span></div>
             <div className="flex items-center gap-2"><Clock className="h-4 w-4" /><span>{post.read_time} min de leitura</span></div>
           </div>
+          {post.cover_image && (
+            <div className="mt-8 rounded-lg overflow-hidden">
+              <img src={post.cover_image} alt={post.title} className="w-full h-auto object-cover max-h-[500px]" />
+            </div>
+          )}
         </header>
+
 
         <div className="prose prose-lg max-w-none mb-12 font-sans">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
