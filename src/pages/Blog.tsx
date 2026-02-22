@@ -63,9 +63,15 @@ export default function Blog() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post: any) => (
               <Card key={post.id} className="overflow-hidden hover:-translate-y-2 transition-transform duration-300">
-                <div className="aspect-video bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center">
-                  <Music className="h-16 w-16 text-primary/50" />
-                </div>
+                {post.cover_image ? (
+                  <div className="aspect-video overflow-hidden">
+                    <img src={post.cover_image} alt={post.title} className="w-full h-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="aspect-video bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center">
+                    <Music className="h-16 w-16 text-primary/50" />
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     {post.categories?.name && <Badge variant="secondary" className="text-xs">{post.categories.name}</Badge>}
