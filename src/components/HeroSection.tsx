@@ -16,7 +16,7 @@ export default function HeroSection() {
 
           <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-background mb-4 leading-tight">
             Ensino de música de forma lúdica,{" "}
-            <span className="text-yellow-400">com qualidade</span>,<br />
+            <span className="text-accent">com qualidade</span>,<br />
             ajudando a realizar sonhos
           </h1>
 
