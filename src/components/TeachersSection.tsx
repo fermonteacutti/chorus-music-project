@@ -4,10 +4,10 @@ import { Music, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const teachers = [
-  { id: 1, name: "Prof. Carlos Mendes", instrument: "Piano e Teclado", bio: "Formado em música pela UNICAMP, 20 anos de experiência em ensino musical.", initials: "CM" },
-  { id: 2, name: "Profa. Juliana Costa", instrument: "Violão e Guitarra", bio: "Especialista em música popular brasileira, participou de diversas gravações.", initials: "JC" },
-  { id: 3, name: "Prof. Ricardo Alves", instrument: "Bateria e Percussão", bio: "Baterista profissional há 15 anos, tocou com renomados artistas nacionais.", initials: "RA" },
-  { id: 4, name: "Profa. Beatriz Santos", instrument: "Canto e Técnica Vocal", bio: "Cantora lírica, formada em canto pela UNESP, professora há mais de 10 anos.", initials: "BS" }
+  { id: 1, name: "Rosa Maria", instrument: "Piano, Teclado, Flauta Doce, Órgão", bio: "Fundadora da Chorus Music, desenvolveu o Método \"Musik\" para teclado adotado por diversas escolas.", initials: "RM" },
+  { id: 2, name: "Tadeu Zafani", instrument: "Violão, Guitarra, Prática de Banda", bio: "Bacharel em Guitarra pela UNICAMP, Coordenador Pedagógico da Chorus desde 2008.", initials: "TZ" },
+  { id: 3, name: "Bruno Sotil", instrument: "Percussão", bio: "Percussionista e produtor, cursou no Conservatório de Tatuí. Coordena o projeto \"Batuque na Vida\".", initials: "BS" },
+  { id: 4, name: "Marisa Molchansky (Brisa)", instrument: "Canto", bio: "Bacharel em Música Popular pela UNICAMP, integra a coordenação pedagógica da Chorus.", initials: "MM" }
 ];
 
 export default function TeachersSection() {

@@ -1,13 +1,122 @@
 import { Card } from "@/components/ui/card";
-import { Music, Award } from "lucide-react";
+import { Music } from "lucide-react";
 
-const allTeachers = [
-  { id: 1, name: "Carlos Mendes", instrument: "Piano e Teclado", bio: "Formado em música pela UNICAMP com mestrado em performance musical. Mais de 20 anos de experiência em ensino musical, desenvolveu o método MUSIK para teclado adotado por diversas escolas.", initials: "CM", specialties: ["Piano Clássico", "Teclado Popular", "Harmonia"] },
-  { id: 2, name: "Juliana Costa", instrument: "Violão e Guitarra", bio: "Especialista em música popular brasileira, participou de diversas gravações com artistas renomados. Formada pela UNESP com especialização em música popular.", initials: "JC", specialties: ["MPB", "Jazz", "Blues"] },
-  { id: 3, name: "Ricardo Alves", instrument: "Bateria e Percussão", bio: "Baterista profissional há 15 anos, tocou com renomados artistas nacionais e internacionais. Professor certificado pela Escola de Música de Brasília.", initials: "RA", specialties: ["Rock", "Jazz", "Música Latina"] },
-  { id: 4, name: "Beatriz Santos", instrument: "Canto e Técnica Vocal", bio: "Cantora lírica formada em canto pela UNESP, professora há mais de 10 anos. Especialista em técnica vocal e repertório erudito e popular.", initials: "BS", specialties: ["Ópera", "MPB", "Técnica Vocal"] },
-  { id: 5, name: "Fernando Lima", instrument: "Saxofone e Flauta", bio: "Músico profissional com formação em instrumentos de sopro pela Berklee College of Music. Experiência em orquestras e bandas de jazz.", initials: "FL", specialties: ["Jazz", "Música Clássica", "Improvisação"] },
-  { id: 6, name: "Mariana Rocha", instrument: "Musicalização Infantil", bio: "Pedagoga musical especializada em educação infantil. Desenvolveu metodologia lúdica para crianças a partir de 8 meses de idade.", initials: "MR", specialties: ["Educação Infantil", "Método Orff", "Ludopedagogia"] }
+// Photos
+import imgRosaMaria from "@/assets/profissionais/rosa-maria.webp";
+import imgCeciliaCardoso from "@/assets/profissionais/cecilia-cardoso.webp";
+import imgMarileneFortes from "@/assets/profissionais/marilene-fortes.webp";
+import imgTadeuZafani from "@/assets/profissionais/tadeu-zafani.webp";
+import imgRobertoPassos from "@/assets/profissionais/roberto-passos.webp";
+import imgIedaCruz from "@/assets/profissionais/ieda-cruz.webp";
+import imgMarisaMolchansky from "@/assets/profissionais/marisa-molchansky.webp";
+import imgBrunoSotil from "@/assets/profissionais/bruno-sotil.webp";
+import imgSarahSelles from "@/assets/profissionais/sarah-selles.webp";
+import imgGeRibeiro from "@/assets/profissionais/ge-ribeiro.webp";
+
+interface Professional {
+  id: number;
+  name: string;
+  instrument: string;
+  bio: string;
+  initials: string;
+  photo?: string;
+}
+
+const allProfessionals: Professional[] = [
+  {
+    id: 1,
+    name: "Rosa Maria",
+    instrument: "Piano, Teclado, Flauta Doce, Órgão, Sopro Novo Yamaha",
+    bio: "Formada em Piano pelo Conservatório Musical Campinas e Licenciatura em Educação Musical pela UFSCar. Fundadora da Chorus Music em 1993, desenvolveu o Método para Teclado \"Musik\", adotado por diversas escolas no Brasil. Divide seu tempo entre aulas, direção da escola, apresentações e monitoria do Sopro Novo Yamaha.",
+    initials: "RM",
+    photo: imgRosaMaria,
+  },
+  {
+    id: 2,
+    name: "Cecilia Cardoso",
+    instrument: "Piano, Teclado, Flauta Doce, Órgão",
+    bio: "Formada no Curso Profissionalizante e Técnico Musical pelo Conservatório Carlos Gomes. Fez curso avançado de Piano erudito com a professora Olga Levermann e formou-se em Órgão Eletrônico pelo Curso Yamaha. Toca profissionalmente em eventos e ministra aulas na Chorus desde 2000.",
+    initials: "CC",
+    photo: imgCeciliaCardoso,
+  },
+  {
+    id: 3,
+    name: "Marilene R. Fortes",
+    instrument: "Acordeon, Piano, Teclado, Órgão",
+    bio: "Formou-se Pianista e Harmonicista (Acordeon) no Conservatório Edy Meirelles. Fez curso de Harmonia Tradicional e Funcional pela UNICAMP. Atuou como solista de Acordeon em diversas peças e na Orquestra Filarmônica de Valinhos. Na Chorus, ministra aulas de Acordeon, Piano, Teclado e Órgão.",
+    initials: "MF",
+    photo: imgMarileneFortes,
+  },
+  {
+    id: 4,
+    name: "Tadeu Zafani",
+    instrument: "Violão, Guitarra, Prática de Banda",
+    bio: "Bacharel em Guitarra Elétrica pela UNICAMP com Mestrado em Educação Musical. Compositor, arranjador, guitarrista e violonista com experiência em Pop, Rock, MPB, Jazz e Choro. Ministra aulas na Chorus desde 2008 e exerce a função de Coordenador Pedagógico.",
+    initials: "TZ",
+    photo: imgTadeuZafani,
+  },
+  {
+    id: 5,
+    name: "Roberto Passos",
+    instrument: "Violão, Viola Caipira, Cavaquinho, Guitarra, Contrabaixo",
+    bio: "Estudou Violão Clássico com o Prof. Milton Nunes do Conservatório Carlos Gomes e cursou Música Popular na UNICAMP. Ganhou seu 1º concurso de violão com apenas 8 anos. Leciona cordas na Chorus há mais de 20 anos, além de atuar como guitarrista em bandas e músico de estúdio.",
+    initials: "RP",
+    photo: imgRobertoPassos,
+  },
+  {
+    id: 6,
+    name: "Ieda Cruz",
+    instrument: "Canto e Violão",
+    bio: "Compositora, cantora e violonista. Formada em Ciências Sociais pela UNICAMP, estudou Canto Popular na Faculdade Souza Lima. Lançou os CDs autorais \"Decote\" e \"Eletroxote e Outros Choques\", apresentando-se em diversas unidades do SESC e casas de shows.",
+    initials: "IC",
+    photo: imgIedaCruz,
+  },
+  {
+    id: 7,
+    name: "Marisa Molchansky (Brisa)",
+    instrument: "Canto",
+    bio: "Bacharel em Música Popular pela UNICAMP, atua profissionalmente desde 2000 como professora de canto. Lançou o CD autoral \"Brisa\" com distribuição pelo selo Fonomatic. Na Chorus, ministra aulas de canto e integra a equipe de coordenação pedagógica.",
+    initials: "MM",
+    photo: imgMarisaMolchansky,
+  },
+  {
+    id: 8,
+    name: "Bruno Sotil",
+    instrument: "Percussão",
+    bio: "Percussionista, arranjador e produtor, cursou Percussão MPB-Jazz no Conservatório de Tatuí. Fundou os grupos \"Mandorová\" e \"Casa Caiada\", com quem fez turnês internacionais. Na Chorus, é professor de Percussão e coordena o projeto \"Batuque na Vida\".",
+    initials: "BS",
+    photo: imgBrunoSotil,
+  },
+  {
+    id: 9,
+    name: "Sarah Selles",
+    instrument: "Flauta Transversal",
+    bio: "Bacharel em Flauta Transversal pela Faculdade Mozarteum de São Paulo. Atua como recitalista, solista e regente, tendo participado como convidada da Orquestra Sinfônica da UNICAMP e Orquestra Sinfônica Municipal de Campinas. Coordena e rege a Orquestra de Flautas da UNICAMP.",
+    initials: "SS",
+    photo: imgSarahSelles,
+  },
+  {
+    id: 10,
+    name: "Gê Ribeiro",
+    instrument: "Trompete e Flugelhorn",
+    bio: "Bacharel em trompete pela FA.M.O.S.P., fez performance na Alemanha como solista. Participou de gravações com Airto Moreira, atuou na Orquestra da Hebe Camargo e em musicais como \"Pernas pro Ar\" com Claudia Raia. Atuante na cena musical de Campinas.",
+    initials: "GR",
+    photo: imgGeRibeiro,
+  },
+  {
+    id: 11,
+    name: "Júlia Oliveira",
+    instrument: "Musicalização Infantil e Canto",
+    bio: "",
+    initials: "JO",
+  },
+  {
+    id: 12,
+    name: "Roberval Welsi",
+    instrument: "Piano, Teclado, Flauta Doce, Órgão",
+    bio: "",
+    initials: "RW",
+  },
 ];
 
 export default function Professores() {
@@ -24,30 +133,32 @@ export default function Professores() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allTeachers.map((teacher, index) => (
-            <Card key={teacher.id} className="p-8">
+          {allProfessionals.map((prof) => (
+            <Card key={prof.id} className="p-8">
               <div className="text-center mb-6">
-                <div className="mb-4 mx-auto h-32 w-32 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-primary">{teacher.initials}</span>
+                <div className="mb-4 mx-auto h-32 w-32 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+                  {prof.photo ? (
+                    <img
+                      src={prof.photo}
+                      alt={prof.name}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-3xl font-bold text-primary">{prof.initials}</span>
+                  )}
                 </div>
-                <h3 className="font-semibold text-2xl mb-2 font-sans">{teacher.name}</h3>
+                <h3 className="font-semibold text-2xl mb-2 font-sans">{prof.name}</h3>
                 <div className="flex items-center justify-center gap-2 text-primary mb-4">
                   <Music className="h-5 w-5" />
-                  <span className="font-medium font-sans">{teacher.instrument}</span>
+                  <span className="font-medium font-sans text-sm">{prof.instrument}</span>
                 </div>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6 font-sans text-center">{teacher.bio}</p>
-              <div className="border-t border-border/50 pt-6">
-                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-3">
-                  <Award className="h-4 w-4" />
-                  <span className="font-medium font-sans">Especialidades:</span>
-                </div>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {teacher.specialties.map((specialty, idx) => (
-                    <span key={idx} className="px-3 py-1 rounded-full bg-secondary text-xs font-medium font-sans">{specialty}</span>
-                  ))}
-                </div>
-              </div>
+              {prof.bio && (
+                <p className="text-muted-foreground text-sm leading-relaxed font-sans text-center">
+                  {prof.bio}
+                </p>
+              )}
             </Card>
           ))}
         </div>
