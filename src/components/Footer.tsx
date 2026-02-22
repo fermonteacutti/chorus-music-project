@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube } from "lucide-react";
+import logoWhite from "@/assets/logo-chorus-white.png";
 
 export default function Footer() {
   return (
@@ -7,9 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <span className="text-2xl font-serif font-bold text-background tracking-wide mb-6 block">
-              CHORUS
-            </span>
+            <img src={logoWhite} alt="Chorus Escola de Música" className="h-12 w-auto mb-6" />
             <p className="text-background/70 text-sm mb-4">
               Ensinar música de forma lúdica, com qualidade, ajudando a realizar sonhos desde 1993.
             </p>
