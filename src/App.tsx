@@ -16,6 +16,8 @@ import BlogPost from "@/pages/BlogPost";
 import Termos from "@/pages/Termos";
 import Privacidade from "@/pages/Privacidade";
 import Cookies from "@/pages/Cookies";
+import AdminLogin from "@/pages/AdminLogin";
+import AdminDashboard from "@/pages/AdminDashboard";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +43,8 @@ const App = () => (
             <Route path="/privacidade" element={<Privacidade />} />
             <Route path="/cookies" element={<Cookies />} />
           </Route>
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
