@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Music, Award, GraduationCap } from "lucide-react";
 
 const allTeachers = [
-  { id: 1, name: "Prof. Carlos Mendes", instrument: "Piano e Teclado", bio: "Formado em música pela UNICAMP com mestrado em performance musical. Mais de 20 anos de experiência em ensino musical, desenvolveu o método MUSIK para teclado adotado por diversas escolas.", initials: "CM", specialties: ["Piano Clássico", "Teclado Popular", "Harmonia"] },
+  { id: 1, name: "Carlos Mendes", instrument: "Piano e Teclado", bio: "Formado em música pela UNICAMP com mestrado em performance musical. Mais de 20 anos de experiência em ensino musical, desenvolveu o método MUSIK para teclado adotado por diversas escolas.", initials: "CM", specialties: ["Piano Clássico", "Teclado Popular", "Harmonia"] },
   { id: 2, name: "Profa. Juliana Costa", instrument: "Violão e Guitarra", bio: "Especialista em música popular brasileira, participou de diversas gravações com artistas renomados. Formada pela UNESP com especialização em música popular.", initials: "JC", specialties: ["MPB", "Jazz", "Blues"] },
   { id: 3, name: "Prof. Ricardo Alves", instrument: "Bateria e Percussão", bio: "Baterista profissional há 15 anos, tocou com renomados artistas nacionais e internacionais. Professor certificado pela Escola de Música de Brasília.", initials: "RA", specialties: ["Rock", "Jazz", "Música Latina"] },
   { id: 4, name: "Profa. Beatriz Santos", instrument: "Canto e Técnica Vocal", bio: "Cantora lírica formada em canto pela UNESP, professora há mais de 10 anos. Especialista em técnica vocal e repertório erudito e popular.", initials: "BS", specialties: ["Ópera", "MPB", "Técnica Vocal"] },
