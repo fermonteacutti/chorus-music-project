@@ -1,12 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Music } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
+import vivenciaMusicalizacao from "@/assets/vivencia-musicalizacao.png";
+import vivenciaCoral from "@/assets/vivencia-coral.png";
+import vivenciaJam from "@/assets/vivencia-jam.png";
+import vivenciaRodaViolao from "@/assets/vivencia-roda-violao.png";
 
 const vivencias = [
-  { id: 1, title: "Musicalização Infantil", description: "A musicalização infantil é uma vivência lúdica e criativa que introduz as crianças ao universo musical através de brincadeiras, jogos rítmicos e exploração de instrumentos. Desenvolvemos a percepção auditiva, coordenação motora e expressão artística dos pequenos, criando uma base sólida para o aprendizado musical futuro.", quando: "Sábados pela manhã", duracao: "1 hora" },
-  { id: 2, title: "Coral Chorus", description: "O Coral Chorus é uma experiência transformadora onde vozes se unem em harmonia. Trabalhamos técnica vocal, respiração, afinação e interpretação em um ambiente acolhedor e colaborativo. É uma oportunidade única de desenvolver habilidades musicais enquanto faz parte de um grupo que compartilha a paixão pela música.", quando: "Quartas-feiras à noite", duracao: "1h30" },
-  { id: 3, title: "Jam Session", description: "As Jam Sessions da Chorus são encontros musicais onde alunos e professores se reúnem para tocar juntos de forma espontânea e criativa. É o momento perfeito para praticar improvisação, conhecer outros músicos e experimentar diferentes estilos musicais em um ambiente descontraído e inspirador.", quando: "Último sábado do mês", duracao: "2 horas" },
-  { id: 4, title: "Roda de Violão", description: "A Roda de Violão é uma vivência coletiva onde os participantes tocam e cantam juntos músicas populares brasileiras e internacionais. É uma forma descontraída de praticar acordes, ritmos e repertório, além de criar laços com outros apaixonados pelo instrumento.", quando: "Sextas-feiras à tarde", duracao: "1h30" }
+  { id: 1, title: "Musicalização Infantil", image: vivenciaMusicalizacao, description: "A musicalização infantil é uma vivência lúdica e criativa que introduz as crianças ao universo musical através de brincadeiras, jogos rítmicos e exploração de instrumentos. Desenvolvemos a percepção auditiva, coordenação motora e expressão artística dos pequenos, criando uma base sólida para o aprendizado musical futuro.", quando: "Sábados pela manhã", duracao: "1 hora" },
+  { id: 2, title: "Coral Chorus", image: vivenciaCoral, description: "O Coral Chorus é uma experiência transformadora onde vozes se unem em harmonia. Trabalhamos técnica vocal, respiração, afinação e interpretação em um ambiente acolhedor e colaborativo. É uma oportunidade única de desenvolver habilidades musicais enquanto faz parte de um grupo que compartilha a paixão pela música.", quando: "Quartas-feiras à noite", duracao: "1h30" },
+  { id: 3, title: "Jam Session", image: vivenciaJam, description: "As Jam Sessions da Chorus são encontros musicais onde alunos e professores se reúnem para tocar juntos de forma espontânea e criativa. É o momento perfeito para praticar improvisação, conhecer outros músicos e experimentar diferentes estilos musicais em um ambiente descontraído e inspirador.", quando: "Último sábado do mês", duracao: "2 horas" },
+  { id: 4, title: "Roda de Violão", image: vivenciaRodaViolao, description: "A Roda de Violão é uma vivência coletiva onde os participantes tocam e cantam juntos músicas populares brasileiras e internacionais. É uma forma descontraída de praticar acordes, ritmos e repertório, além de criar laços com outros apaixonados pelo instrumento.", quando: "Sextas-feiras à tarde", duracao: "1h30" }
 ];
 
 export default function Vivencias() {
@@ -31,8 +35,8 @@ export default function Vivencias() {
           <div className="space-y-16">
             {vivencias.map((vivencia) => (
               <Card key={vivencia.id} className="overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center">
-                  <Music className="h-20 w-20 text-primary/40" />
+                <div className="aspect-video overflow-hidden">
+                  <img src={vivencia.image} alt={vivencia.title} className="w-full h-full object-cover" />
                 </div>
                 <CardContent className="p-8 lg:p-12">
                   <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-foreground">{vivencia.title}</h2>
