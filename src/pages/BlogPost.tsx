@@ -4,7 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import DOMPurify from "dompurify";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export default function BlogPost() {
   const { id: slug } = useParams();
@@ -62,10 +63,9 @@ export default function BlogPost() {
           </div>
         </header>
 
-        <div
-          className="prose prose-lg max-w-none mb-12 font-sans"
-          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content) }}
-        />
+        <div className="prose prose-lg max-w-none mb-12 font-sans">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+        </div>
 
         <div className="border-t pt-8">
           <div className="flex items-center gap-4">
