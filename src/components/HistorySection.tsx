@@ -1,4 +1,8 @@
-import { Award, Heart, Target, Music } from "lucide-react";
+import { Award, Heart, Target } from "lucide-react";
+import fachadaImg from "@/assets/fachada-chorus.png";
+import salaImg from "@/assets/sala-instrumentos.jpg";
+import luminariaImg from "@/assets/luminaria-chorus.jpg";
+import auditorioImg from "@/assets/auditorio-palco.jpg";
 
 export default function HistorySection() {
   return (
@@ -63,17 +67,17 @@ export default function HistorySection() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="aspect-square rounded-lg bg-secondary overflow-hidden flex items-center justify-center">
-              <Music className="h-12 w-12 text-primary/30" />
+            <div className="aspect-square rounded-lg bg-secondary overflow-hidden">
+              <img src={fachadaImg} alt="Fachada da Chorus" className="w-full h-full object-cover" />
             </div>
-            <div className="aspect-square rounded-lg bg-secondary overflow-hidden mt-8 flex items-center justify-center">
-              <Music className="h-12 w-12 text-primary/30" />
+            <div className="aspect-square rounded-lg bg-secondary overflow-hidden mt-8">
+              <img src={salaImg} alt="Sala de instrumentos" className="w-full h-full object-cover" />
             </div>
-            <div className="aspect-square rounded-lg bg-secondary overflow-hidden -mt-8 flex items-center justify-center">
-              <Music className="h-12 w-12 text-primary/30" />
+            <div className="aspect-square rounded-lg bg-secondary overflow-hidden -mt-8">
+              <img src={luminariaImg} alt="Luminária Chorus" className="w-full h-full object-cover" />
             </div>
-            <div className="aspect-square rounded-lg bg-secondary overflow-hidden flex items-center justify-center">
-              <Music className="h-12 w-12 text-primary/30" />
+            <div className="aspect-square rounded-lg bg-secondary overflow-hidden">
+              <img src={auditorioImg} alt="Auditório" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

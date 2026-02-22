@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoWhite from "@/assets/logo-chorus-white.png";
 
 export default function Header() {
   const location = useLocation();
@@ -27,9 +28,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" data-testid="link-home">
-            <span className="text-2xl font-serif font-bold text-primary-foreground tracking-wide">
-              CHORUS
-            </span>
+            <img src={logoWhite} alt="Chorus Escola de Música" className="h-12 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">

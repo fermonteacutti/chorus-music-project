@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Building, Piano, Mic, Music } from "lucide-react";
+import { Building, Piano, Mic } from "lucide-react";
 import { Link } from "react-router-dom";
+import salaImg from "@/assets/sala-instrumentos.jpg";
+import auditorioImg from "@/assets/auditorio-palco.jpg";
+import auditorioPlateiaImg from "@/assets/auditorio-plateia.png";
 
 export default function EventRoomSection() {
   return (
@@ -19,15 +22,15 @@ export default function EventRoomSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="flex flex-col gap-4">
             <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-square rounded-lg bg-background overflow-hidden flex items-center justify-center">
-                <Music className="h-12 w-12 text-primary/30" />
+              <div className="aspect-square rounded-lg bg-background overflow-hidden">
+                <img src={salaImg} alt="Sala de instrumentos" className="w-full h-full object-cover" />
               </div>
-              <div className="aspect-square rounded-lg bg-background overflow-hidden flex items-center justify-center">
-                <Music className="h-12 w-12 text-primary/30" />
+              <div className="aspect-square rounded-lg bg-background overflow-hidden">
+                <img src={auditorioPlateiaImg} alt="Auditório plateia" className="w-full h-full object-cover" />
               </div>
             </div>
-            <div className="aspect-video rounded-lg bg-background overflow-hidden flex items-center justify-center">
-              <Music className="h-16 w-16 text-primary/30" />
+            <div className="aspect-video rounded-lg bg-background overflow-hidden">
+              <img src={auditorioImg} alt="Auditório com palco" className="w-full h-full object-cover" />
             </div>
             <Link to="/galeria">
               <Button variant="outline" className="w-full">

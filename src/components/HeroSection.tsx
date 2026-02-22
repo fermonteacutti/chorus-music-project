@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Music, Calendar } from "lucide-react";
+import fachadaImg from "@/assets/fachada-chorus.png";
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden bg-foreground">
-      <div className="absolute inset-0 bg-foreground" />
+      <img src={fachadaImg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" />
+      <div className="absolute inset-0 bg-foreground/80" />
       <div className="absolute inset-0 z-10 w-full flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary border-primary border">
