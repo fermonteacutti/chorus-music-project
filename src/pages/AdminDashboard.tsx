@@ -10,6 +10,7 @@ import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/hooks/use-toast";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { LogOut, Plus, Edit, Trash2, ArrowLeft } from "lucide-react";
+import PostForm from "@/components/admin/PostForm";
 import type { Session } from "@supabase/supabase-js";
 import logoIcon from "@/assets/logo-chorus-icon.png";
 
@@ -182,82 +183,3 @@ export default function AdminDashboard() {
   );
 }
 
-function PostForm({ post, categories, onSave, onCancel, saving }: any) {
-  const [title, setTitle] = useState(post?.title || "");
-  const [excerpt, setExcerpt] = useState(post?.excerpt || "");
-  const [content, setContent] = useState(post?.content || "");
-  const [categoryId, setCategoryId] = useState(post?.category_id || "");
-  const [authorName, setAuthorName] = useState(post?.author_name || "");
-  const [readTime, setReadTime] = useState(post?.read_time || 5);
-  const [published, setPublished] = useState(post?.published || false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSave({
-      title,
-      excerpt,
-      content,
-      category_id: categoryId || null,
-      author_name: authorName,
-      read_time: readTime,
-      published,
-    });
-  };
-
-  return (
-    <div>
-      <div className="flex items-center justify-between mb-8">
-        <h2 className="font-serif text-2xl font-bold">{post?.id ? "Editar Post" : "Novo Post"}</h2>
-      </div>
-
-      <Card className="p-6">
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <Label htmlFor="title">Título</Label>
-            <Input id="title" value={title} onChange={(e) => setTitle(e.target.value)} required />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <Label htmlFor="author">Autor</Label>
-              <Input id="author" value={authorName} onChange={(e) => setAuthorName(e.target.value)} required />
-            </div>
-            <div>
-              <Label htmlFor="category">Categoria</Label>
-              <select
-                id="category"
-                value={categoryId}
-                onChange={(e) => setCategoryId(e.target.value)}
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-              >
-                <option value="">Sem categoria</option>
-                {categories.map((cat: any) => (
-                  <option key={cat.id} value={cat.id}>{cat.name}</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <Label htmlFor="readTime">Tempo de leitura (min)</Label>
-              <Input id="readTime" type="number" value={readTime} onChange={(e) => setReadTime(Number(e.target.value))} min={1} />
-            </div>
-          </div>
-          <div>
-            <Label htmlFor="excerpt">Resumo</Label>
-            <Textarea id="excerpt" value={excerpt} onChange={(e) => setExcerpt(e.target.value)} rows={2} required />
-          </div>
-          <div>
-            <Label htmlFor="content">Conteúdo (Markdown)</Label>
-            <Textarea id="content" value={content} onChange={(e) => setContent(e.target.value)} rows={12} required className="font-mono text-sm" />
-          </div>
-          <div className="flex items-center gap-2">
-            <Switch checked={published} onCheckedChange={setPublished} />
-            <Label>Publicado</Label>
-          </div>
-          <div className="flex gap-3 pt-4">
-            <Button type="submit" disabled={saving}>{saving ? "Salvando..." : "Salvar"}</Button>
-            <Button type="button" variant="outline" onClick={onCancel}>Cancelar</Button>
-          </div>
-        </form>
-      </Card>
-    </div>
-  );
-}
