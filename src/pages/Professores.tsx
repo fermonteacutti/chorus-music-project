@@ -12,6 +12,9 @@ import imgMarisaMolchansky from "@/assets/profissionais/marisa-molchansky.webp";
 import imgBrunoSotil from "@/assets/profissionais/bruno-sotil.webp";
 import imgSarahSelles from "@/assets/profissionais/sarah-selles.webp";
 import imgGeRibeiro from "@/assets/profissionais/ge-ribeiro.webp";
+import imgAlineSampaio from "@/assets/profissionais/aline-sampaio.webp";
+import imgJoelPinheiro from "@/assets/profissionais/joel-pinheiro.webp";
+import imgPaulinhoAlmeida from "@/assets/profissionais/paulinho-almeida.webp";
 
 interface Professional {
   id: number;
@@ -102,6 +105,30 @@ const allProfessionals: Professional[] = [
     bio: "Bacharel em trompete pela FA.M.O.S.P., fez performance na Alemanha como solista. Participou de gravações com Airto Moreira, atuou na Orquestra da Hebe Camargo e em musicais como \"Pernas pro Ar\" com Claudia Raia. Atuante na cena musical de Campinas.",
     initials: "GR",
     photo: imgGeRibeiro,
+  },
+  {
+    id: 13,
+    name: "Aline Cristine Sampaio",
+    instrument: "Canto, Musicoterapia",
+    bio: "Natural de Tatuí/SP, formada em Musicoterapia pela Faculdade de Artes do Paraná e Bacharelado em Canto Lírico. Possui extenso repertório de MPB e Internacional com grande versatilidade vocal. Atua também como Musicoterapeuta em Educação Especial e Gerontologia.",
+    initials: "AS",
+    photo: imgAlineSampaio,
+  },
+  {
+    id: 14,
+    name: "Joel Pinheiro",
+    instrument: "Canto, Vocal Coaching",
+    bio: "Iniciou estudos de música aos dez anos. Vencedor de concurso de MPB em Campinas com composição autoral. Vocal Coach e Fonoaudiólogo formado pela USP/Bauru, especializando em voz pelo CECEV. Selecionado em duas edições para o Festival Internacional de Inverno de Campos do Jordão.",
+    initials: "JP",
+    photo: imgJoelPinheiro,
+  },
+  {
+    id: 15,
+    name: "Paulinho de Almeida",
+    instrument: "Contrabaixo, Guitarra, Violão, Viola Caipira, Cavaquinho",
+    bio: "Multi-instrumentista, compositor e produtor, radicado na Alemanha por 24 anos. Foi Diretor de Projetos no Instituto de Artes KREUZBERGER MUSIKALISCHE AKTION em Berlim. Apresentou-se em 14 países e lançou o CD instrumental \"Trilhas na Cidade\" em 2014.",
+    initials: "PA",
+    photo: imgPaulinhoAlmeida,
   },
   {
     id: 11,
