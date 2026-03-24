@@ -1,4 +1,4 @@
-import { Award, Heart, Target } from "lucide-react";
+import { Award, Heart, Target, Music } from "lucide-react";
 import fachadaImg from "@/assets/fachada-chorus.png";
 import salaImg from "@/assets/sala-instrumentos.jpg";
 import luminariaImg from "@/assets/luminaria-chorus.jpg";
