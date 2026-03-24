@@ -80,7 +80,10 @@ export default function ContactMapSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1 font-sans">Telefones</h3>
-                  <p className="text-muted-foreground text-sm font-sans">(19) 3255-3999<br />(19) 99213-8954</p>
+                  <p className="text-muted-foreground text-sm font-sans">
+                    <a href="https://wa.me/5519992138954" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(19) 99213-8954 (WhatsApp)</a>
+                    <br />(19) 3255-3999
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">

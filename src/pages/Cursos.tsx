@@ -34,16 +34,6 @@ export default function Cursos() {
                 </div>
                 <h3 className="font-semibold text-2xl mb-3 font-sans">{course.name}</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed font-sans">{course.description}</p>
-                <div className="space-y-2 mb-6 text-sm font-sans">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Duração:</span>
-                    <span className="font-medium">{course.duration}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Nível:</span>
-                    <span className="font-medium">{course.level}</span>
-                  </div>
-                </div>
                 <Button className="w-full">Saiba Mais</Button>
               </Card>
             );

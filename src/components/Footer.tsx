@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import logoWhite from "@/assets/logo-chorus-white.png";
+import logoCaem from "@/assets/logo-caem.png";
 
 export default function Footer() {
   return (
@@ -20,7 +21,7 @@ export default function Footer() {
               <Link to="/" className="text-background/70 hover:text-primary transition-colors text-sm">Home</Link>
               <Link to="/cursos" className="text-background/70 hover:text-primary transition-colors text-sm">Cursos</Link>
               <Link to="/professores" className="text-background/70 hover:text-primary transition-colors text-sm">Professores</Link>
-              <Link to="/eventos" className="text-background/70 hover:text-primary transition-colors text-sm">Eventos</Link>
+              <Link to="/vivencias" className="text-background/70 hover:text-primary transition-colors text-sm">Vivências</Link>
               <Link to="/blog" className="text-background/70 hover:text-primary transition-colors text-sm">Blog</Link>
               <Link to="/contato" className="text-background/70 hover:text-primary transition-colors text-sm">Contato</Link>
             </nav>
@@ -31,8 +32,12 @@ export default function Footer() {
             <div className="text-background/70 text-sm space-y-2">
               <p>Av. José Bonifácio, 2304</p>
               <p>Jardim Paineiras, Campinas - SP</p>
-              <p className="mt-4">(19) 3255-3999</p>
-              <p>(19) 99213-8954</p>
+              <p className="mt-4">
+                <a href="https://wa.me/5519992138954" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  (19) 99213-8954 (WhatsApp)
+                </a>
+              </p>
+              <p>(19) 3255-3999</p>
               <a
                 href="mailto:chorus@chorusmusic.com.br"
                 className="block hover:text-primary transition-colors"
@@ -76,14 +81,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-background/50 text-sm">
-            © {new Date().getFullYear()} Chorus Escola de Música. Todos os direitos reservados.
-          </p>
-          <div className="flex gap-6 text-sm">
-            <Link to="/termos" className="text-background/50 hover:text-primary transition-colors">Termos de Uso</Link>
-            <Link to="/privacidade" className="text-background/50 hover:text-primary transition-colors">Política de Privacidade</Link>
-            <Link to="/cookies" className="text-background/50 hover:text-primary transition-colors">Cookies</Link>
+        <div className="border-t border-background/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+            <div className="flex items-center gap-3">
+              <img src={logoCaem} alt="CAEM" className="h-8 w-auto" />
+              <p className="text-background/60 text-xs">
+                Escola filiada ao CAEM – Central de Apoio às Escolas de Música do Brasil
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-background/50 text-sm">
+              © {new Date().getFullYear()} Chorus Escola de Música. Todos os direitos reservados.
+            </p>
+            <div className="flex gap-6 text-sm">
+              <Link to="/termos" className="text-background/50 hover:text-primary transition-colors">Termos de Uso</Link>
+              <Link to="/privacidade" className="text-background/50 hover:text-primary transition-colors">Política de Privacidade</Link>
+              <Link to="/cookies" className="text-background/50 hover:text-primary transition-colors">Cookies</Link>
+            </div>
           </div>
         </div>
       </div>

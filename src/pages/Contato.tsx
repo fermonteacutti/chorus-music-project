@@ -45,7 +45,10 @@ export default function Contato() {
               <Phone className="h-8 w-8 text-primary" />
             </div>
             <h3 className="font-semibold text-xl mb-3 font-sans">Telefones</h3>
-            <p className="text-muted-foreground font-sans">(19) 3255-3999<br />(19) 99213-8954<br />WhatsApp disponível</p>
+            <p className="text-muted-foreground font-sans">
+              <a href="https://wa.me/5519992138954" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(19) 99213-8954 (WhatsApp)</a>
+              <br />(19) 3255-3999
+            </p>
           </Card>
           <Card className="p-8 text-center">
             <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">

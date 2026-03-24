@@ -7,7 +7,7 @@ import Layout from "@/components/Layout";
 import Home from "@/pages/Home";
 import Cursos from "@/pages/Cursos";
 import Professores from "@/pages/Professores";
-import Eventos from "@/pages/Eventos";
+
 import Vivencias from "@/pages/Vivencias";
 import Galeria from "@/pages/Galeria";
 import Contato from "@/pages/Contato";
@@ -34,7 +34,7 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/cursos" element={<Cursos />} />
             <Route path="/professores" element={<Professores />} />
-            <Route path="/eventos" element={<Eventos />} />
+            
             <Route path="/vivencias" element={<Vivencias />} />
             <Route path="/galeria" element={<Galeria />} />
             <Route path="/contato" element={<Contato />} />
