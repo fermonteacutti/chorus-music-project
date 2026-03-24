@@ -71,6 +71,87 @@ export default function Cursos() {
             );
           })}
         </div>
+
+        {/* Modalidades */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4 text-foreground">
+              Nossas <span className="text-primary">Modalidades</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">
+              Escolha a modalidade que melhor se adapta ao seu estilo de vida
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Chorus BASE */}
+            <Card className="p-8 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent hover:-translate-y-1 transition-transform duration-300">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                  <Calendar className="h-7 w-7 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-2xl font-bold text-foreground">Chorus BASE</h3>
+                  <Badge variant="secondary" className="text-xs mt-1">Mais Popular</Badge>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed font-sans">
+                Duas aulas semanais: uma individual e personalizada para técnica e repertório, 
+                e outra em grupo para aprofundar os elementos da música e interagir com outros instrumentistas.
+              </p>
+            </Card>
+
+            {/* Chorus FLEX */}
+            <Card className="p-8 border-primary/20 hover:-translate-y-1 transition-transform duration-300">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                  <Shuffle className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-foreground">Chorus FLEX</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed font-sans">
+                Marque sua aula no dia e horário mais conveniente para a sua agenda. 
+                Ideal para quem tem mudanças constantes, viaja com frequência ou de última hora.
+              </p>
+            </Card>
+
+            {/* Chorus VIP */}
+            <Card className="p-8 border-primary/20 hover:-translate-y-1 transition-transform duration-300">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                  <Home className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-foreground">Chorus VIP</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed font-sans">
+                Aulas em domicílio, individuais ou em dupla, com dia e hora marcada. 
+                O padrão de qualidade Chorus entregue no seu endereço em Campinas e região.
+              </p>
+            </Card>
+
+            {/* Chorus On-line */}
+            <Card className="p-8 border-primary/20 hover:-translate-y-1 transition-transform duration-300">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                  <Video className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-foreground">Chorus On-line</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed font-sans">
+                Aulas de música online ao vivo, com professor e aluno conectados por videoconferência. 
+                Qualidade Chorus onde você estiver.
+              </p>
+            </Card>
+          </div>
+
+          <div className="text-center mt-10">
+            <Button size="lg" asChild>
+              <a href="https://wa.me/5519992138954?text=Olá! Gostaria de saber mais sobre as modalidades de aula." target="_blank" rel="noopener noreferrer">
+                Agende uma Entrevista
+              </a>
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );
