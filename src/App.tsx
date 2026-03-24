@@ -7,7 +7,7 @@ import Layout from "@/components/Layout";
 import Home from "@/pages/Home";
 import Cursos from "@/pages/Cursos";
 import Professores from "@/pages/Professores";
-import Eventos from "@/pages/Eventos";
+
 import Vivencias from "@/pages/Vivencias";
 import Galeria from "@/pages/Galeria";
 import Contato from "@/pages/Contato";
