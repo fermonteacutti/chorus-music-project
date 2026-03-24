@@ -61,14 +61,13 @@ export default function HeroSection() {
           </div>
 
           <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-            Ensino de música de forma lúdica,{" "}
-            <span className="text-accent">com qualidade</span>,<br />
-            ajudando a realizar sonhos
+            Onde a música cria{" "}
+            <span className="text-accent">conexões</span>
           </h1>
 
           <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-6 leading-relaxed font-sans">
-            Desde 1993, a Chorus é referência em Campinas pela seriedade no ensino da música,
-            qualificação dos professores e variedade de oportunidades para nossos alunos.
+            Aqui você encontra um espaço seguro, inspirador e personalizado para evoluir na música:
+            respeitando seu ritmo, sua voz e seu momento.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
