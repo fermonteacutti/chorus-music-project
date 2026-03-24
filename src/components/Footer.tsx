@@ -32,8 +32,12 @@ export default function Footer() {
             <div className="text-background/70 text-sm space-y-2">
               <p>Av. José Bonifácio, 2304</p>
               <p>Jardim Paineiras, Campinas - SP</p>
-              <p className="mt-4">(19) 3255-3999</p>
-              <p>(19) 99213-8954</p>
+              <p className="mt-4">
+                <a href="https://wa.me/5519992138954" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  (19) 99213-8954 (WhatsApp)
+                </a>
+              </p>
+              <p>(19) 3255-3999</p>
               <a
                 href="mailto:chorus@chorusmusic.com.br"
                 className="block hover:text-primary transition-colors"
