@@ -12,7 +12,6 @@ export default function Header() {
     { path: "/", label: "Home" },
     { path: "/cursos", label: "Cursos" },
     { path: "/professores", label: "Profissionais" },
-    { path: "/eventos", label: "Eventos" },
     { path: "/vivencias", label: "Vivências" },
     { path: "/blog", label: "Blog" },
     { path: "/contato", label: "Contato" },
