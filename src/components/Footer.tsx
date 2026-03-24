@@ -81,14 +81,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-background/50 text-sm">
-            © {new Date().getFullYear()} Chorus Escola de Música. Todos os direitos reservados.
-          </p>
-          <div className="flex gap-6 text-sm">
-            <Link to="/termos" className="text-background/50 hover:text-primary transition-colors">Termos de Uso</Link>
-            <Link to="/privacidade" className="text-background/50 hover:text-primary transition-colors">Política de Privacidade</Link>
-            <Link to="/cookies" className="text-background/50 hover:text-primary transition-colors">Cookies</Link>
+        <div className="border-t border-background/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+            <div className="flex items-center gap-3">
+              <img src={logoCaem} alt="CAEM" className="h-8 w-auto" />
+              <p className="text-background/60 text-xs">
+                Escola filiada ao CAEM – Central de Apoio às Escolas de Música do Brasil
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-background/50 text-sm">
+              © {new Date().getFullYear()} Chorus Escola de Música. Todos os direitos reservados.
+            </p>
+            <div className="flex gap-6 text-sm">
+              <Link to="/termos" className="text-background/50 hover:text-primary transition-colors">Termos de Uso</Link>
+              <Link to="/privacidade" className="text-background/50 hover:text-primary transition-colors">Política de Privacidade</Link>
+              <Link to="/cookies" className="text-background/50 hover:text-primary transition-colors">Cookies</Link>
+            </div>
           </div>
         </div>
       </div>
