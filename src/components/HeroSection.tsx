@@ -53,7 +53,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-foreground/70" />
 
       {/* Content */}
-      <div className="relative z-10 w-full flex items-center justify-center">
+      <div className="relative z-10 w-full flex items-end justify-center">
         <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary border-primary border">
             <Music className="h-4 w-4 text-primary-foreground" />
