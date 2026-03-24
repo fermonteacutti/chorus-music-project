@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Music, Calendar } from "lucide-react";
-import { useState, useEffect, useCallback } from "react";
+import { Music, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 import fachadaImg from "@/assets/fachada-chorus.png";
 import recepcaoImg from "@/assets/carousel-recepcao.png";
@@ -20,37 +20,64 @@ const slides = [
 
 export default function HeroSection() {
   const [current, setCurrent] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const goToNext = useCallback(() => {
-    setIsTransitioning(true);
-    setTimeout(() => {
+  const resetTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-      setIsTransitioning(false);
-    }, 600);
+    }, 5000);
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(goToNext, 5000);
-    return () => clearInterval(timer);
-  }, [goToNext]);
+    resetTimer();
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+  }, [resetTimer]);
+
+  const goTo = (index: number) => {
+    setCurrent(index);
+    resetTimer();
+  };
+
+  const goPrev = () => goTo((current - 1 + slides.length) % slides.length);
+  const goNext = () => goTo((current + 1) % slides.length);
 
   return (
     <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-end overflow-hidden">
-      {/* Carousel background images */}
-      {slides.map((slide, index) => (
-        <img
-          key={index}
-          src={slide.src}
-          alt={slide.alt}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
-            index === current && !isTransitioning ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
+      {/* Carousel track - sliding effect */}
+      <div
+        className="absolute inset-0 flex transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
+        {slides.map((slide, index) => (
+          <div key={index} className="min-w-full h-full flex-shrink-0 relative">
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-foreground/70" />
+      {/* Subtle gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+
+      {/* Arrow controls */}
+      <button
+        onClick={goPrev}
+        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 transition-colors"
+        aria-label="Slide anterior"
+      >
+        <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+      </button>
+      <button
+        onClick={goNext}
+        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 transition-colors"
+        aria-label="Próximo slide"
+      >
+        <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+      </button>
 
       {/* Content */}
       <div className="relative z-10 w-full flex items-end justify-center">
@@ -60,12 +87,12 @@ export default function HeroSection() {
             <span className="text-sm font-medium text-primary-foreground">Desde 1993 em Campinas</span>
           </div>
 
-          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
             Onde a música cria{" "}
             <span className="text-accent">conexões</span>
           </h1>
 
-          <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-6 leading-relaxed font-sans">
+          <p className="text-base md:text-lg text-white max-w-2xl mx-auto mb-6 leading-relaxed font-sans drop-shadow-md">
             Aqui você encontra um espaço seguro, inspirador e personalizado para evoluir na música:
             respeitando seu ritmo, sua voz e seu momento.
           </p>
@@ -96,7 +123,7 @@ export default function HeroSection() {
             {slides.map((_, index) => (
               <button
                 key={index}
-                onClick={() => { setCurrent(index); setIsTransitioning(false); }}
+                onClick={() => goTo(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   index === current ? "w-8 bg-primary" : "w-2 bg-white/40 hover:bg-white/60"
                 }`}
