@@ -1,4 +1,4 @@
-import { Award, Heart, Target } from "lucide-react";
+import { Award, Heart, Target, Music } from "lucide-react";
 import fachadaImg from "@/assets/fachada-chorus.png";
 import salaImg from "@/assets/sala-instrumentos.jpg";
 import luminariaImg from "@/assets/luminaria-chorus.jpg";
@@ -21,46 +21,70 @@ export default function HistorySection() {
               para motivá-los.
             </p>
 
-            <div className="space-y-6 mb-8">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Target className="h-6 w-6 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1 font-sans">Nossa Missão</h3>
-                  <p className="text-muted-foreground font-sans">
-                    Ensinar música de forma lúdica, com qualidade, ajudando a realizar sonhos.
-                  </p>
-                </div>
-              </div>
+            <div className="mb-8">
+              <h3 className="font-semibold text-xl mb-3 font-sans text-foreground">Nossa Essência</h3>
+              <p className="text-muted-foreground font-sans leading-relaxed mb-6">
+                Ensinar música com qualidade, acolhimento e paixão, promovendo uma experiência
+                acessível, significativa e transformadora: onde a música se torna ponte para o
+                desenvolvimento pessoal, o bem-estar e a conexão entre as pessoas.
+              </p>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Award className="h-6 w-6 text-primary" />
+              <h3 className="font-semibold text-xl mb-4 font-sans text-foreground">Nossos Valores</h3>
+              <div className="space-y-4">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Heart className="h-6 w-6 text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-1 font-sans">Escuta que transforma</h4>
+                    <p className="text-muted-foreground font-sans">
+                      Ouvimos com presença para compreender, acolher e agir.
+                    </p>
                   </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1 font-sans">Nossa Visão</h3>
-                  <p className="text-muted-foreground font-sans">
-                    Ser referência nacional de ensino musical.
-                  </p>
-                </div>
-              </div>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Heart className="h-6 w-6 text-primary" />
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Target className="h-6 w-6 text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-1 font-sans">Caminho com propósito</h4>
+                    <p className="text-muted-foreground font-sans">
+                      Cada jornada musical tem um sentido, não só um destino.
+                    </p>
                   </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1 font-sans">Nosso Compromisso</h3>
-                  <p className="text-muted-foreground font-sans">
-                    Proporcionar experiências musicais transformadoras para todas as idades.
-                  </p>
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Award className="h-6 w-6 text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-1 font-sans">Excelência com afeto</h4>
+                    <p className="text-muted-foreground font-sans">
+                      Buscamos qualidade com cuidado, técnica com calor humano.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Music className="h-6 w-6 text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-1 font-sans">Alegria que pulsa</h4>
+                    <p className="text-muted-foreground font-sans">
+                      A música como fonte de prazer, liberdade e celebração.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
