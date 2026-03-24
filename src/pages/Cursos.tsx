@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Music, Guitar, Mic, Drum, Piano, Users, BookOpen } from "lucide-react";
+import { Music, Guitar, Mic, Drum, Piano, Users, BookOpen, Calendar, Video, Home, Shuffle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const courses = [
