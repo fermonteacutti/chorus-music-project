@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import logoWhite from "@/assets/logo-chorus-white.png";
+import logoCaem from "@/assets/logo-caem.png";
 
 export default function Footer() {
   return (
