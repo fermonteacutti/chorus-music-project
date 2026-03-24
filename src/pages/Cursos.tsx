@@ -51,7 +51,11 @@ export default function Cursos() {
                 com teoria e prática integradas em linguagem simples e objetiva. Adotado por escolas 
                 no Brasil e nos Estados Unidos.
               </p>
-              <Button>Saiba Mais Sobre o MUSIK</Button>
+              <Button asChild>
+                <a href="https://wa.me/5519992138954?text=Olá! Gostaria de saber mais sobre o método MUSIK." target="_blank" rel="noopener noreferrer">
+                  Saiba Mais Sobre o MUSIK
+                </a>
+              </Button>
             </div>
           </div>
         </Card>
