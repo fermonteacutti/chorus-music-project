@@ -3,8 +3,6 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 import fachadaChorus from "@/assets/fachada-chorus.webp";
 import auditorioPalco from "@/assets/auditorio-palco.webp";
-import auditorioPlateiaImg from "@/assets/auditorio-plateia.webp";
-import auditorioPlateia2 from "@/assets/auditorio-plateia-2.webp";
 import carouselRecepcao from "@/assets/carousel-recepcao.webp";
 import carouselSalaBateria from "@/assets/carousel-sala-bateria.webp";
 import carouselSalaPiano from "@/assets/carousel-sala-piano.webp";
