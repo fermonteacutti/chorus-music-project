@@ -11,15 +11,35 @@ import carouselSalaPiano from "@/assets/carousel-sala-piano.png";
 import carouselSalaViolao from "@/assets/carousel-sala-violao.png";
 import salaInstrumentos from "@/assets/sala-instrumentos.jpg";
 import luminariaChorus from "@/assets/luminaria-chorus.jpg";
+import sala2Piano from "@/assets/sala-2-piano.webp";
+import sala10Microfone from "@/assets/sala-10-microfone.webp";
+import sala2PianoTeclado from "@/assets/sala-2-piano-teclado.webp";
+import sala6Teclado from "@/assets/sala-6-teclado.webp";
+import sala6ViolaoGuitarra from "@/assets/sala-6-violao-guitarra.webp";
+import sala1AcordeonTeclado from "@/assets/sala-1-acordeon-teclado.webp";
+import sala8Teclado from "@/assets/sala-8-teclado.webp";
+import sala1TecladoPiano from "@/assets/sala-1-teclado-piano.webp";
+import recepcao2 from "@/assets/recepcao-2.webp";
+import musicalizacao from "@/assets/musicalizacao.webp";
 
 const photos = [
   { src: fachadaChorus, alt: "Fachada da Chorus Escola de Música", label: "Fachada" },
   { src: carouselRecepcao, alt: "Recepção da escola", label: "Recepção" },
+  { src: recepcao2, alt: "Recepção com logo Chorus", label: "Recepção" },
   { src: auditorioPalco, alt: "Auditório - Palco", label: "Auditório" },
   { src: auditorioPlateiaImg, alt: "Auditório - Plateia", label: "Auditório" },
   { src: auditorioPlateia2, alt: "Auditório - Vista da plateia", label: "Auditório" },
+  { src: musicalizacao, alt: "Sala de Musicalização Infantil", label: "Musicalização" },
+  { src: sala1AcordeonTeclado, alt: "Sala 1 - Acordeom e Teclado", label: "Sala de Aula" },
+  { src: sala1TecladoPiano, alt: "Sala 1 - Teclado e Piano", label: "Sala de Aula" },
+  { src: sala2Piano, alt: "Sala 2 - Piano", label: "Piano" },
+  { src: sala2PianoTeclado, alt: "Sala 2 - Piano e Teclado", label: "Piano" },
   { src: carouselSalaPiano, alt: "Sala de Piano", label: "Piano" },
+  { src: sala6ViolaoGuitarra, alt: "Sala 6 - Violão e Guitarra", label: "Violão" },
   { src: carouselSalaViolao, alt: "Sala de Violão", label: "Violão" },
+  { src: sala6Teclado, alt: "Sala 6 - Teclado", label: "Teclado" },
+  { src: sala8Teclado, alt: "Sala 8 - Teclado", label: "Teclado" },
+  { src: sala10Microfone, alt: "Sala 10 - Canto e Microfone", label: "Canto" },
   { src: carouselSalaBateria, alt: "Sala de Bateria", label: "Bateria" },
   { src: salaInstrumentos, alt: "Sala de Instrumentos", label: "Instrumentos" },
   { src: luminariaChorus, alt: "Detalhe da luminária Chorus", label: "Ambiente" },
