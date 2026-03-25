@@ -3,8 +3,6 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 import fachadaChorus from "@/assets/fachada-chorus.webp";
 import auditorioPalco from "@/assets/auditorio-palco.webp";
-import auditorioPlateiaImg from "@/assets/auditorio-plateia.webp";
-import auditorioPlateia2 from "@/assets/auditorio-plateia-2.webp";
 import carouselRecepcao from "@/assets/carousel-recepcao.webp";
 import carouselSalaBateria from "@/assets/carousel-sala-bateria.webp";
 import carouselSalaPiano from "@/assets/carousel-sala-piano.webp";
@@ -27,8 +25,6 @@ const photos = [
   { src: carouselRecepcao, alt: "Recepção da escola", label: "Recepção" },
   { src: recepcao2, alt: "Recepção com logo Chorus", label: "Recepção" },
   { src: auditorioPalco, alt: "Auditório - Palco", label: "Auditório" },
-  { src: auditorioPlateiaImg, alt: "Auditório - Plateia", label: "Auditório" },
-  { src: auditorioPlateia2, alt: "Auditório - Vista da plateia", label: "Auditório" },
   { src: musicalizacao, alt: "Sala de Musicalização Infantil", label: "Musicalização" },
   { src: sala1AcordeonTeclado, alt: "Sala 1 - Acordeom e Teclado", label: "Sala de Aula" },
   { src: sala1TecladoPiano, alt: "Sala 1 - Teclado e Piano", label: "Sala de Aula" },
