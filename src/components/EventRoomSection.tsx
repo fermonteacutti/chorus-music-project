@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Building, Piano, Mic } from "lucide-react";
 import { Link } from "react-router-dom";
-import salaImg from "@/assets/sala-instrumentos.jpg";
-import auditorioImg from "@/assets/auditorio-palco.jpg";
-import auditorioPlateiaImg from "@/assets/auditorio-plateia.png";
+import salaImg from "@/assets/sala-instrumentos.webp";
+import auditorioImg from "@/assets/auditorio-palco.webp";
+import auditorioPlateiaImg from "@/assets/auditorio-plateia.webp";
 
 export default function EventRoomSection() {
   return (
