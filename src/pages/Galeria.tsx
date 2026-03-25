@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-import fachadaChorus from "@/assets/fachada-chorus.png";
-import auditorioPalco from "@/assets/auditorio-palco.jpg";
-import auditorioPlateiaImg from "@/assets/auditorio-plateia.png";
-import auditorioPlateia2 from "@/assets/auditorio-plateia-2.png";
-import carouselRecepcao from "@/assets/carousel-recepcao.png";
-import carouselSalaBateria from "@/assets/carousel-sala-bateria.png";
-import carouselSalaPiano from "@/assets/carousel-sala-piano.png";
-import carouselSalaViolao from "@/assets/carousel-sala-violao.png";
-import salaInstrumentos from "@/assets/sala-instrumentos.jpg";
-import luminariaChorus from "@/assets/luminaria-chorus.jpg";
+import fachadaChorus from "@/assets/fachada-chorus.webp";
+import auditorioPalco from "@/assets/auditorio-palco.webp";
+import auditorioPlateiaImg from "@/assets/auditorio-plateia.webp";
+import auditorioPlateia2 from "@/assets/auditorio-plateia-2.webp";
+import carouselRecepcao from "@/assets/carousel-recepcao.webp";
+import carouselSalaBateria from "@/assets/carousel-sala-bateria.webp";
+import carouselSalaPiano from "@/assets/carousel-sala-piano.webp";
+import carouselSalaViolao from "@/assets/carousel-sala-violao.webp";
+import salaInstrumentos from "@/assets/sala-instrumentos.webp";
+import luminariaChorus from "@/assets/luminaria-chorus.webp";
 import sala2Piano from "@/assets/sala-2-piano.webp";
 import sala10Microfone from "@/assets/sala-10-microfone.webp";
 import sala2PianoTeclado from "@/assets/sala-2-piano-teclado.webp";

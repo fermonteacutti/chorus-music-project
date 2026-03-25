@@ -1,8 +1,8 @@
 import { Award, Heart, Target, Music } from "lucide-react";
-import fachadaImg from "@/assets/fachada-chorus.png";
-import salaImg from "@/assets/sala-instrumentos.jpg";
-import luminariaImg from "@/assets/luminaria-chorus.jpg";
-import auditorioImg from "@/assets/auditorio-palco.jpg";
+import fachadaImg from "@/assets/fachada-chorus.webp";
+import salaImg from "@/assets/sala-instrumentos.webp";
+import luminariaImg from "@/assets/luminaria-chorus.webp";
+import auditorioImg from "@/assets/auditorio-palco.webp";
 
 export default function HistorySection() {
   return (

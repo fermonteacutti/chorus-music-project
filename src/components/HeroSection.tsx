@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Music, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback, useRef } from "react";
 
-import fachadaImg from "@/assets/fachada-chorus.png";
-import recepcaoImg from "@/assets/carousel-recepcao.png";
-import salaPianoImg from "@/assets/carousel-sala-piano.png";
-import salaViolaoImg from "@/assets/carousel-sala-violao.png";
-import salaBateriaImg from "@/assets/carousel-sala-bateria.png";
-import auditorioImg from "@/assets/auditorio-palco.jpg";
+import fachadaImg from "@/assets/fachada-chorus.webp";
+import recepcaoImg from "@/assets/carousel-recepcao.webp";
+import salaPianoImg from "@/assets/carousel-sala-piano.webp";
+import salaViolaoImg from "@/assets/carousel-sala-violao.webp";
+import salaBateriaImg from "@/assets/carousel-sala-bateria.webp";
+import auditorioImg from "@/assets/auditorio-palco.webp";
 
 const slides = [
   { src: fachadaImg, alt: "Fachada da Chorus Escola de Música" },
