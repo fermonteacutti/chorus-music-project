@@ -4,17 +4,17 @@ import { useState, useEffect, useCallback, useRef } from "react";
 
 import fachadaImg from "@/assets/fachada-chorus.webp";
 import recepcaoImg from "@/assets/carousel-recepcao.webp";
-import salaPianoImg from "@/assets/carousel-sala-piano.webp";
-import salaViolaoImg from "@/assets/carousel-sala-violao.webp";
+import recepcao2Img from "@/assets/carousel-recepcao-2.webp";
 import salaBateriaImg from "@/assets/carousel-sala-bateria.webp";
+import salaBateria2Img from "@/assets/carousel-sala-bateria-2.webp";
 import auditorioImg from "@/assets/auditorio-palco.webp";
 
 const slides = [
   { src: fachadaImg, alt: "Fachada da Chorus Escola de Música" },
   { src: recepcaoImg, alt: "Recepção da escola" },
-  { src: salaPianoImg, alt: "Sala de piano" },
-  { src: salaViolaoImg, alt: "Sala de violão" },
+  { src: recepcao2Img, alt: "Recepção da escola - cantinho do café" },
   { src: salaBateriaImg, alt: "Sala de bateria e ensaio" },
+  { src: salaBateria2Img, alt: "Sala de instrumentos e bateria" },
   { src: auditorioImg, alt: "Auditório com palco" },
 ];
 
