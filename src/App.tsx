@@ -20,6 +20,8 @@ import AdminLogin from "@/pages/AdminLogin";
 import AdminDashboard from "@/pages/AdminDashboard";
 import AdminPosts from "@/pages/AdminPosts";
 import AdminPostEditor from "@/pages/AdminPostEditor";
+import AdminCategories from "@/pages/AdminCategories";
+import AdminTags from "@/pages/AdminTags";
 import AdminRegister from "@/pages/AdminRegister";
 import NotFound from "@/pages/NotFound";
 
@@ -58,6 +60,8 @@ const App = () => (
           <Route path="/admin/posts" element={<AdminPosts />} />
           <Route path="/admin/posts/novo" element={<AdminPostEditor />} />
           <Route path="/admin/posts/:id" element={<AdminPostEditor />} />
+          <Route path="/admin/categorias" element={<AdminCategories />} />
+          <Route path="/admin/tags" element={<AdminTags />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
