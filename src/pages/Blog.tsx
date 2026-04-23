@@ -91,7 +91,9 @@ export default function Blog() {
                       </Button>
                     </Link>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-3 font-sans">Por {post.author_name}</p>
+                  {post.author_name && (
+                <p className="text-xs text-muted-foreground mt-3 font-sans">Por {post.author_name}</p>
+                )}
                 </div>
               </Card>
             ))}
