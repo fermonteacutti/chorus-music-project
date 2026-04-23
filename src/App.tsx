@@ -8,7 +8,6 @@ import Layout from "@/components/Layout";
 import Home from "@/pages/Home";
 import Cursos from "@/pages/Cursos";
 import Professores from "@/pages/Professores";
-
 import Vivencias from "@/pages/Vivencias";
 import Galeria from "@/pages/Galeria";
 import Contato from "@/pages/Contato";
@@ -19,6 +18,8 @@ import Privacidade from "@/pages/Privacidade";
 import Cookies from "@/pages/Cookies";
 import AdminLogin from "@/pages/AdminLogin";
 import AdminDashboard from "@/pages/AdminDashboard";
+import AdminPosts from "@/pages/AdminPosts";
+import AdminPostEditor from "@/pages/AdminPostEditor";
 import AdminRegister from "@/pages/AdminRegister";
 import NotFound from "@/pages/NotFound";
 
@@ -42,7 +43,6 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/cursos" element={<Cursos />} />
             <Route path="/professores" element={<Professores />} />
-            
             <Route path="/vivencias" element={<Vivencias />} />
             <Route path="/galeria" element={<Galeria />} />
             <Route path="/contato" element={<Contato />} />
@@ -55,6 +55,9 @@ const App = () => (
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/register" element={<AdminRegister />} />
           <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/posts" element={<AdminPosts />} />
+          <Route path="/admin/posts/novo" element={<AdminPostEditor />} />
+          <Route path="/admin/posts/:id" element={<AdminPostEditor />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
