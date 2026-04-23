@@ -3,35 +3,26 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowRight, Music } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "5 Benefícios da Música para o Desenvolvimento Infantil",
-    excerpt: "Descubra como a música pode transformar o desenvolvimento cognitivo e emocional das crianças.",
-    category: "Educação Musical",
-    date: "15 de Março, 2024",
-    readTime: "5 min",
-  },
-  {
-    id: 2,
-    title: "Como Escolher o Instrumento Ideal para Você",
-    excerpt: "Um guia completo para ajudar você a encontrar o instrumento perfeito para iniciar sua jornada musical.",
-    category: "Iniciantes",
-    date: "10 de Março, 2024",
-    readTime: "7 min",
-  },
-  {
-    id: 3,
-    title: "A Importância da Prática Regular no Aprendizado Musical",
-    excerpt: "Entenda por que a consistência é fundamental para o progresso no estudo de qualquer instrumento.",
-    category: "Dicas",
-    date: "5 de Março, 2024",
-    readTime: "4 min",
-  }
-];
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function BlogPreviewSection() {
+  const { data: posts = [] } = useQuery({
+    queryKey: ["blog-preview"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("posts")
+        .select("*, categories(name)")
+        .eq("published", true)
+        .order("created_at", { ascending: false })
+        .limit(3);
+      if (error) throw error;
+      return data;
+    },
+  });
+
+  if (posts.length === 0) return null;
+
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -45,35 +36,39 @@ export default function BlogPreviewSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {blogPosts.map((post, index) => (
-            <Card
-              key={post.id}
-              className="overflow-hidden hover:-translate-y-2 transition-transform duration-300"
-            >
-              <div className="aspect-video bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center">
-                <Music className="h-16 w-16 text-primary/50" />
-              </div>
-
+          {posts.map((post: any) => (
+            <Card key={post.id} className="overflow-hidden hover:-translate-y-2 transition-transform duration-300">
+              {post.cover_image ? (
+                <div className="aspect-video overflow-hidden">
+                  <img src={post.cover_image} alt={post.title} className="w-full h-full object-cover" />
+                </div>
+              ) : (
+                <div className="aspect-video bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center">
+                  <Music className="h-16 w-16 text-primary/50" />
+                </div>
+              )}
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
-                  <Badge variant="secondary" className="text-xs">{post.category}</Badge>
-                  <span className="text-xs text-muted-foreground">•</span>
-                  <span className="text-xs text-muted-foreground font-sans">{post.readTime}</span>
+                  {post.categories?.name && (
+                    <Badge variant="secondary" className="text-xs">{post.categories.name}</Badge>
+                  )}
+                  {post.read_time && (
+                    <>
+                      <span className="text-xs text-muted-foreground">•</span>
+                      <span className="text-xs text-muted-foreground font-sans">{post.read_time} min</span>
+                    </>
+                  )}
                 </div>
-
-                <h3 className="font-semibold text-xl mb-2 font-sans">{post.title}</h3>
+                <h3 className="font-semibold text-xl mb-2 line-clamp-2 font-sans">{post.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-2 font-sans">{post.excerpt}</p>
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <Calendar className="h-4 w-4" />
-                    <span className="font-sans">{post.date}</span>
+                    <span className="font-sans">{new Date(post.created_at).toLocaleDateString("pt-BR")}</span>
                   </div>
-
-                  <Link to={`/blog`}>
+                  <Link to={`/blog/${post.slug}`}>
                     <Button variant="ghost" size="sm" className="text-primary hover:text-primary">
-                      Ler mais
-                      <ArrowRight className="h-4 w-4 ml-1" />
+                      Ler mais <ArrowRight className="h-4 w-4 ml-1" />
                     </Button>
                   </Link>
                 </div>
