@@ -22,7 +22,6 @@ import AdminPosts from "@/pages/AdminPosts";
 import AdminPostEditor from "@/pages/AdminPostEditor";
 import AdminCategories from "@/pages/AdminCategories";
 import AdminTags from "@/pages/AdminTags";
-import AdminRegister from "@/pages/AdminRegister";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -55,7 +54,6 @@ const App = () => (
             <Route path="/cookies" element={<Cookies />} />
           </Route>
           <Route path="/admin/login" element={<AdminLogin />} />
-          <Route path="/admin/register" element={<AdminRegister />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/posts" element={<AdminPosts />} />
           <Route path="/admin/posts/novo" element={<AdminPostEditor />} />
