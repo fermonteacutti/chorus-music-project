@@ -1,13 +1,45 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Music, GraduationCap } from "lucide-react";
+import { Music } from "lucide-react";
 import { Link } from "react-router-dom";
+import imgRosa from "@/assets/professores/rosa.webp";
+import imgTadeu from "@/assets/professores/tadeu-1.webp";
+import imgPaulinho from "@/assets/professores/paulinho.webp";
+import imgIeda from "@/assets/professores/ieda.webp";
 
 const teachers = [
-  { id: 1, name: "Rosa Maria", instrument: "Piano, Teclado, Flauta Doce, Órgão", bio: "Fundadora da Chorus Music, desenvolveu o Método \"Musik\" para teclado adotado por diversas escolas.", initials: "RM" },
-  { id: 2, name: "Tadeu Zafani", instrument: "Violão, Guitarra, Prática de Banda", bio: "Bacharel em Guitarra pela UNICAMP, Coordenador Pedagógico da Chorus desde 2008.", initials: "TZ" },
-  { id: 3, name: "Bruno Sotil", instrument: "Percussão", bio: "Percussionista e produtor, cursou no Conservatório de Tatuí. Coordena o projeto \"Batuque na Vida\".", initials: "BS" },
-  { id: 4, name: "Marisa Molchansky (Brisa)", instrument: "Canto", bio: "Bacharel em Música Popular pela UNICAMP, integra a coordenação pedagógica da Chorus.", initials: "MM" }
+  {
+    id: 1,
+    name: "Rosa Gomes",
+    instrument: "Piano • Teclado • Flauta Doce • Órgão",
+    bio: "Fundadora da Chorus em 1993 e criadora do Método MUSIK para teclado, adotado por diversas escolas no Brasil.",
+    photo: imgRosa,
+    initials: "RG",
+  },
+  {
+    id: 2,
+    name: "Tadeu Zafani",
+    instrument: "Violão • Guitarra • Prática de Banda",
+    bio: "Bacharel e mestre em Educação Musical pela UNICAMP. Coordenador Pedagógico da Chorus desde 2008.",
+    photo: imgTadeu,
+    initials: "TZ",
+  },
+  {
+    id: 3,
+    name: "Paulinho de Almeida",
+    instrument: "Violão • Guitarra • Prática de Banda",
+    bio: "Músico e educador com mais de duas décadas de atuação na Alemanha. Compositor e produtor musical.",
+    photo: imgPaulinho,
+    initials: "PA",
+  },
+  {
+    id: 4,
+    name: "Ieda Cruz",
+    instrument: "Canto",
+    bio: "Cantora, compositora e professora com mais de 20 anos de atuação. Dois álbuns autorais lançados.",
+    photo: imgIeda,
+    initials: "IC",
+  },
 ];
 
 export default function TeachersSection() {
@@ -24,20 +56,31 @@ export default function TeachersSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {teachers.map((teacher, index) => (
-            <Card key={teacher.id} className="p-6 text-center hover:-translate-y-2 transition-transform duration-300">
-              <div className="mb-4 mx-auto h-24 w-24 rounded-full bg-primary/10 flex items-center justify-center">
-                <span className="text-2xl font-bold text-primary">{teacher.initials}</span>
+          {teachers.map((teacher) => (
+            <Card
+              key={teacher.id}
+              className="overflow-hidden hover:-translate-y-2 transition-transform duration-300"
+            >
+              {/* Foto */}
+              <div className="aspect-video overflow-hidden bg-primary/5">
+                <img
+                  src={teacher.photo}
+                  alt={teacher.name}
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
               </div>
-              <h3 className="font-semibold text-xl mb-1 font-sans">{teacher.name}</h3>
-              <div className="flex items-center justify-center gap-2 text-primary text-sm mb-3">
-                <Music className="h-4 w-4" />
-                <span className="font-sans">{teacher.instrument}</span>
-              </div>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4 font-sans">{teacher.bio}</p>
-              <div className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                <GraduationCap className="h-4 w-4" />
-                <span className="font-sans">Professor Qualificado</span>
+
+              {/* Conteúdo */}
+              <div className="p-5 text-center">
+                <h3 className="font-semibold text-lg mb-1 font-sans">{teacher.name}</h3>
+                <div className="flex items-center justify-center gap-1.5 text-primary text-xs mb-3">
+                  <Music className="h-3.5 w-3.5" />
+                  <span className="font-sans">{teacher.instrument}</span>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed font-sans">
+                  {teacher.bio}
+                </p>
               </div>
             </Card>
           ))}
