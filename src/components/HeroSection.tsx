@@ -39,22 +39,23 @@ export default function HeroSection() {
   const goNext = () => goTo((current + 1) % slides.length);
 
   return (
-    <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-end overflow-hidden">
+    <section className="relative h-[70vh] md:h-[90vh] flex items-end overflow-hidden">
       {/* Carousel */}
       <div
-        className="absolute inset-0 flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
-        {slides.map((slide, index) => (
-          <div key={index} className="min-w-full h-full flex-shrink-0 relative">
-            <img
-              src={slide.src}
-              alt={slide.alt}
-              className={`w-full h-full object-cover ${slide.position}`}
-            />
-          </div>
-        ))}
-      </div>
+  className="absolute inset-0 flex transition-transform duration-700 ease-in-out"
+  style={{ transform: `translateX(-${current * 100}%)` }}
+>
+  {slides.map((slide, index) => (
+    <div key={index} className="min-w-full h-full flex-shrink-0 relative">
+      <img
+        src={slide.src}
+        alt={slide.alt}
+        className={`w-full h-full object-cover object-center scale-100 origin-center ${slide.position}`}
+        style={{ objectFit: "cover", objectPosition: "center center" }}
+      />
+    </div>
+  ))}
+</div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
