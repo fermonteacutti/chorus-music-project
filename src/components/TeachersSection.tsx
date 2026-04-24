@@ -22,7 +22,7 @@ const teachers = [
     instrument: "Violão • Guitarra • Prática de Banda",
     bio: "Bacharel e mestre em Educação Musical pela UNICAMP. Coordenador Pedagógico da Chorus desde 2008.",
     photo: imgTadeu,
-    photoPosition: "object-top",
+    photoPosition: "object-[center_5%]",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const teachers = [
     instrument: "Violão • Guitarra • Contrabaixo • Prática de Banda",
     bio: "Músico e educador com mais de duas décadas de atuação na Alemanha. Compositor e produtor musical.",
     photo: imgPaulinho,
-    photoPosition: "object-[center_55%]",
+    photoPosition: "object-[center_45%]",
   },
   {
     id: 4,
