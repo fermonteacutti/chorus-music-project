@@ -3,8 +3,8 @@ import { Music, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback, useRef } from "react";
 
 import fachadaImg from "@/assets/fachada-chorus.webp";
-import recepcaoImg from "@/assets/carousel-recepcao.webp";
 import recepcao2Img from "@/assets/carousel-recepcao-2.webp";
+import recepcaoImg from "@/assets/carousel-recepcao.webp";
 import salaBandaImg from "@/assets/sala-banda.webp";
 import auditorioImg from "@/assets/auditorio-palco.webp";
 import salaInstrumentosImg from "@/assets/sala-instrumentos.webp";
