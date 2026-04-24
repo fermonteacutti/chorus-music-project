@@ -14,7 +14,7 @@ const teachers = [
     instrument: "Piano • Teclado • Flauta Doce • Órgão",
     bio: "Fundadora da Chorus em 1993 e criadora do Método MUSIK para teclado, adotado por diversas escolas no Brasil.",
     photo: imgRosa,
-    initials: "RG",
+    photoPosition: "object-center",
   },
   {
     id: 2,
@@ -22,15 +22,15 @@ const teachers = [
     instrument: "Violão • Guitarra • Prática de Banda",
     bio: "Bacharel e mestre em Educação Musical pela UNICAMP. Coordenador Pedagógico da Chorus desde 2008.",
     photo: imgTadeu,
-    initials: "TZ",
+    photoPosition: "object-top",
   },
   {
     id: 3,
     name: "Paulinho de Almeida",
-    instrument: "Violão • Guitarra • Prática de Banda",
+    instrument: "Violão • Guitarra • Contrabaixo • Prática de Banda",
     bio: "Músico e educador com mais de duas décadas de atuação na Alemanha. Compositor e produtor musical.",
     photo: imgPaulinho,
-    initials: "PA",
+    photoPosition: "object-[center_55%]",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const teachers = [
     instrument: "Canto",
     bio: "Cantora, compositora e professora com mais de 20 anos de atuação. Dois álbuns autorais lançados.",
     photo: imgIeda,
-    initials: "IC",
+    photoPosition: "object-[center_20%]",
   },
 ];
 
@@ -61,17 +61,15 @@ export default function TeachersSection() {
               key={teacher.id}
               className="overflow-hidden hover:-translate-y-2 transition-transform duration-300"
             >
-              {/* Foto */}
               <div className="aspect-video overflow-hidden bg-primary/5">
                 <img
                   src={teacher.photo}
                   alt={teacher.name}
-                  className="w-full h-full object-cover object-top"
+                  className={`w-full h-full object-cover ${teacher.photoPosition}`}
                   loading="lazy"
                 />
               </div>
 
-              {/* Conteúdo */}
               <div className="p-5 text-center">
                 <h3 className="font-semibold text-lg mb-1 font-sans">{teacher.name}</h3>
                 <div className="flex items-center justify-center gap-1.5 text-primary text-xs mb-3">
