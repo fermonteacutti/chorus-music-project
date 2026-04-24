@@ -14,8 +14,7 @@ export default function EventRoomSection() {
             Conheça Nosso <span className="text-primary">Espaço</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-sans">
-            Nossa infraestrutura completa oferece o ambiente ideal para o aprendizado musical.
-            A Sala de Eventos Bebeto também está disponível para locação.
+            Nossa estrutura oferece o ambiente ideal para o aprendizado e a experiência musical.
           </p>
         </div>
 
@@ -60,7 +59,8 @@ export default function EventRoomSection() {
                 <div>
                   <h3 className="font-semibold text-lg mb-1 font-sans">Instrumentos</h3>
                   <p className="text-muted-foreground font-sans">
-                    Pianos, teclados, bateria, violões e outros instrumentos de qualidade à disposição.
+                    Piano, Teclado, Guitarra, Violão, Baixo, Ukulele, Bateria e outros instrumentos
+                    de qualidade à disposição para aulas e treinos fora do horário de aula.
                   </p>
                 </div>
               </div>
@@ -70,10 +70,10 @@ export default function EventRoomSection() {
                   <Mic className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-1 font-sans">Sala de Eventos Bebeto</h3>
+                  <h3 className="font-semibold text-lg mb-1 font-sans">Sala de Eventos Bebeto von Buettner</h3>
                   <p className="text-muted-foreground font-sans">
-                    Espaço para até 100 pessoas com piano de cauda, som profissional e iluminação.
-                    <span className="text-primary font-medium"> Disponível para locação.</span>
+                    Espaço para 55 pessoas com palco, piano, som e iluminação profissionais.{" "}
+                    <span className="text-primary font-medium">Disponível também para locação.</span>
                   </p>
                 </div>
               </div>
@@ -82,7 +82,12 @@ export default function EventRoomSection() {
             <Button
               size="lg"
               className="mt-8 w-full sm:w-auto"
-              onClick={() => window.open(`https://wa.me/5519992138954?text=${encodeURIComponent('Olá! Gostaria de saber mais sobre a locação da Sala de Eventos Bebeto.')}`, '_blank')}
+              onClick={() =>
+                window.open(
+                  `https://wa.me/5519992138954?text=${encodeURIComponent("Olá! Gostaria de saber mais sobre a locação da Sala de Eventos Bebeto von Buettner.")}`,
+                  "_blank"
+                )
+              }
             >
               Consultar Disponibilidade
             </Button>
