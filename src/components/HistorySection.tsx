@@ -14,18 +14,16 @@ export default function HistorySection() {
               A História da <span className="text-primary">Chorus</span>
             </h2>
 
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed font-sans">
-              A Chorus Escola de Música está sediada em Campinas desde 1993 e tornou-se
-              referência na cidade pela seriedade no ensino da música, pela qualificação
-              de nossos professores e variedade de oportunidades oferecidas a nossos alunos
-              para motivá-los.
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed font-sans">
+              Aqui você encontra um espaço inspirador, seguro e personalizado para evoluir na música,
+              respeitando seu ritmo, sua voz e seu momento.
             </p>
 
             <div className="mb-8">
               <h3 className="font-semibold text-xl mb-3 font-sans text-foreground">Nossa Essência</h3>
               <p className="text-muted-foreground font-sans leading-relaxed mb-6">
                 Ensinar música com qualidade, acolhimento e paixão, promovendo uma experiência
-                acessível, significativa e transformadora: onde a música se torna ponte para o
+                acessível, significativa e transformadora — onde a música se torna ponte para o
                 desenvolvimento pessoal, o bem-estar e a conexão entre as pessoas.
               </p>
 
@@ -68,7 +66,7 @@ export default function HistorySection() {
                   <div>
                     <h4 className="font-semibold text-lg mb-1 font-sans">Excelência com afeto</h4>
                     <p className="text-muted-foreground font-sans">
-                      Buscamos qualidade com cuidado, técnica com calor humano.
+                      Buscamos qualidade com cuidado e técnica com calor humano.
                     </p>
                   </div>
                 </div>
