@@ -5,17 +5,17 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import fachadaImg from "@/assets/fachada-chorus.webp";
 import recepcaoImg from "@/assets/carousel-recepcao.webp";
 import recepcao2Img from "@/assets/carousel-recepcao-2.webp";
-import salaBateriaImg from "@/assets/carousel-sala-bateria.webp";
-import salaBateria2Img from "@/assets/carousel-sala-bateria-2.webp";
+import salaBandaImg from "@/assets/sala-banda.webp";
 import auditorioImg from "@/assets/auditorio-palco.webp";
+import salaInstrumentosImg from "@/assets/sala-instrumentos.webp";
 
 const slides = [
-  { src: fachadaImg, alt: "Fachada da Chorus Escola de Música" },
-  { src: recepcaoImg, alt: "Recepção da escola" },
-  { src: recepcao2Img, alt: "Recepção da escola - cantinho do café" },
-  { src: salaBateriaImg, alt: "Sala de bateria e ensaio" },
-  { src: salaBateria2Img, alt: "Sala de instrumentos e bateria" },
-  { src: auditorioImg, alt: "Auditório com palco" },
+  { src: fachadaImg, alt: "Fachada da Chorus Escola de Música", position: "object-center" },
+  { src: recepcaoImg, alt: "Recepção da Chorus", position: "object-center" },
+  { src: recepcao2Img, alt: "Recepção - cantinho do café", position: "object-center" },
+  { src: salaBandaImg, alt: "Sala de banda e ensaio", position: "object-center" },
+  { src: auditorioImg, alt: "Auditório com palco", position: "object-center" },
+  { src: salaInstrumentosImg, alt: "Sala de instrumentos", position: "object-center" },
 ];
 
 export default function HeroSection() {
@@ -34,17 +34,13 @@ export default function HeroSection() {
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [resetTimer]);
 
-  const goTo = (index: number) => {
-    setCurrent(index);
-    resetTimer();
-  };
-
+  const goTo = (index: number) => { setCurrent(index); resetTimer(); };
   const goPrev = () => goTo((current - 1 + slides.length) % slides.length);
   const goNext = () => goTo((current + 1) % slides.length);
 
   return (
     <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-end overflow-hidden">
-      {/* Carousel track - sliding effect */}
+      {/* Carousel */}
       <div
         className="absolute inset-0 flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${current * 100}%)` }}
@@ -54,16 +50,16 @@ export default function HeroSection() {
             <img
               src={slide.src}
               alt={slide.alt}
-              className="w-full h-full object-cover"
+              className={`w-full h-full object-cover ${slide.position}`}
             />
           </div>
         ))}
       </div>
 
-      {/* Subtle gradient overlay for text readability */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
 
-      {/* Arrow controls */}
+      {/* Setas */}
       <button
         onClick={goPrev}
         className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 transition-colors"
@@ -79,7 +75,7 @@ export default function HeroSection() {
         <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
       </button>
 
-      {/* Content */}
+      {/* Conteúdo */}
       <div className="relative z-10 w-full flex items-end justify-center">
         <div className="max-w-4xl mx-auto px-4 md:px-8 pb-12 md:pb-16 text-center">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary border-primary border">
@@ -101,7 +97,6 @@ export default function HeroSection() {
             <Button
               size="lg"
               className="w-full sm:w-auto"
-              data-testid="button-conhecer"
               onClick={() => window.location.href = '/cursos'}
             >
               Conheça Nossos Cursos
@@ -110,7 +105,6 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               className="w-full sm:w-auto bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white/20 hover:text-white"
-              data-testid="button-agendar"
               onClick={() => window.open(`https://wa.me/5519992138954?text=${encodeURIComponent('Olá! Gostaria de agendar uma aula experimental.')}`, '_blank')}
             >
               <Calendar className="h-5 w-5 mr-2" />
@@ -118,7 +112,7 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          {/* Carousel dots */}
+          {/* Dots */}
           <div className="flex justify-center gap-2 mt-8">
             {slides.map((_, index) => (
               <button
