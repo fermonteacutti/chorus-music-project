@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Music, Star, Mic, Guitar } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Calendar, Clock, Music, Star, Mic, Guitar, Users, Trophy, Drum } from "lucide-react";
 import vivenciaMusicalizacao from "@/assets/vivencia-musicalizacao.png";
 import vivenciaCoral from "@/assets/vivencia-coral.png";
 import vivenciaJam from "@/assets/vivencia-jam.png";
@@ -13,7 +12,8 @@ const vivencias = [
     title: "Musicando",
     image: null,
     icon: Music,
-    description: "A conexão entre Técnica, Emoção e Convivência. Incluído gratuitamente na sua matrícula, o Musicando fortalece seu desenvolvimento em grupo e prepara para eventos e experiências marcantes. Mais do que um curso extra, ele complementa o curso e conecta seu aprendizado individual à prática em grupo. Essa vivência coletiva foi criada para integrar o conteúdo das aulas individuais a experiências práticas em grupo, desenvolvendo habilidades que vão além da técnica.",
+    tag: "Incluso na Matrícula",
+    description: "Conexão entre Experiência, Emoção e Convivência.\n\nSem nenhum custo adicional, o Musicando complementa o aprendizado de forma lúdica, fortalece seu desenvolvimento em grupo e prepara para eventos e experiências marcantes.\n\nO Musicando é mais do que um curso extra — ele complementa e conecta seu aprendizado individual à prática em grupo, desenvolvendo habilidades que vão além da técnica.\n\nParticipar do Musicando ajuda você a:\n• Desenvolver percepção musical, escuta ativa e ritmo em conjunto;\n• Aprender a se conectar com outros músicos, como em uma banda ou grupo instrumental;\n• Superar o medo de errar e ganhar confiança ao tocar com outras pessoas;\n• Fortalecer vínculos sociais e emocionais através da música.",
     quando: "Consulte a secretaria",
     duracao: "Variável",
     highlight: true,
@@ -23,8 +23,8 @@ const vivencias = [
     title: "Saraus",
     image: null,
     icon: Mic,
-    description: "Os Saraus da Chorus são encontros íntimos e acolhedores onde alunos apresentam suas performances em um ambiente descontraído e inspirador. É o momento de compartilhar a música que vem sendo construída nas aulas, celebrar conquistas e fortalecer a confiança no palco — sempre com o carinho e apoio de familiares, amigos e colegas.",
-    quando: "Datas especiais ao longo do ano",
+    description: "Apresentações individuais ou com formações variadas que acontecem em nossa sala própria de eventos (Sala Bebeto von Buettner) com som e iluminação profissionais, em duas temporadas anuais no final de cada semestre.\n\nAlém de compartilhar o aprendizado com familiares e amigos, os Saraus também preparam o aluno para outros formatos de apresentações em espaços maiores.",
+    quando: "Final de cada semestre",
     duracao: "2 horas",
   },
   {
@@ -32,40 +32,43 @@ const vivencias = [
     title: "Chorus Show",
     image: null,
     icon: Star,
-    description: "O Chorus Show é o grande evento da escola — uma apresentação especial onde nossos alunos sobem ao palco para mostrar todo o seu talento e evolução. Com produção cuidadosa, iluminação e som profissional, é uma experiência inesquecível de crescimento artístico e pessoal que marca a trajetória de cada músico.",
+    description: "Apresentação com formação de bandas que acontece no final de cada semestre em espaços externos para shows e música ao vivo.\n\nUma experiência real de palco que desenvolve presença cênica, trabalho em equipe e confiança musical.",
     quando: "Semestral",
     duracao: "3 horas",
   },
   {
     id: 3,
-    title: "Shows",
+    title: "Festival Chorus",
     image: null,
-    icon: Guitar,
-    description: "Os Shows da Chorus são apresentações em espaços externos e eventos da comunidade, levando a música dos nossos alunos para além dos muros da escola. Uma oportunidade única de vivenciar a experiência real de um show, desenvolvendo habilidades de performance, presença de palco e trabalho em equipe.",
-    quando: "Ao longo do ano",
+    icon: Trophy,
+    description: "Apresentação com formação de bandas em teatros, com produção profissional que leva a música dos nossos alunos para além dos muros da escola.\n\nUma oportunidade única de vivenciar a experiência real de um show, desenvolvendo habilidades de performance, presença de palco e trabalho em equipe.",
+    quando: "Anual",
     duracao: "Variável",
   },
   {
     id: 4,
     title: "Musicalização Infantil",
     image: vivenciaMusicalizacao,
-    description: "A musicalização infantil é uma vivência lúdica e criativa que introduz as crianças ao universo musical através de brincadeiras, jogos rítmicos e exploração de instrumentos. Desenvolvemos a percepção auditiva, coordenação motora e expressão artística dos pequenos, criando uma base sólida para o aprendizado musical futuro.",
-    quando: "Sábados pela manhã",
+    icon: Users,
+    description: "A música tem presença muito forte na infância, acompanhando todo o desenvolvimento cognitivo e emocional das crianças. Na Musicalização, o contato com um educador musical enriquece esse processo.\n\nO foco não é o aprendizado de um instrumento específico, mas a própria criança e sua relação com a música — desenvolvendo percepção auditiva, coordenação motora, vocabulário e expressividade.",
+    quando: "Consulte a secretaria",
     duracao: "1 hora",
   },
   {
     id: 5,
-    title: "Coral Chorus",
+    title: "Coral Chorus Cantante",
     image: vivenciaCoral,
-    description: "O Coral Chorus é uma experiência transformadora onde vozes se unem em harmonia. Trabalhamos técnica vocal, respiração, afinação e interpretação em um ambiente acolhedor e colaborativo. É uma oportunidade única de desenvolver habilidades musicais enquanto faz parte de um grupo que compartilha a paixão pela música.",
-    quando: "Quartas-feiras à noite",
+    icon: Mic,
+    description: "O canto traz muitos benefícios: fortalece os músculos da garganta, pulmões e diafragma, melhora a respiração e libera endorfina — o hormônio do prazer e bem-estar.\n\nAlém disso, o canto coral promove uma interação social positiva que auxilia no alívio das tensões do dia a dia. O repertório é variado e busca atender os mais diversos gostos e estilos.",
+    quando: "Consulte a secretaria",
     duracao: "1h30",
   },
   {
     id: 6,
     title: "Jam Session",
     image: vivenciaJam,
-    description: "As Jam Sessions da Chorus são encontros musicais onde alunos e professores se reúnem para tocar juntos de forma espontânea e criativa. É o momento perfeito para praticar improvisação, conhecer outros músicos e experimentar diferentes estilos musicais em um ambiente descontraído e inspirador.",
+    icon: Guitar,
+    description: "As Jam Sessions da Chorus são encontros musicais onde alunos e professores se reúnem para tocar juntos de forma espontânea e criativa.\n\nÉ o momento perfeito para praticar improvisação, conhecer outros músicos e experimentar diferentes estilos musicais em um ambiente descontraído e inspirador.",
     quando: "Último sábado do mês",
     duracao: "2 horas",
   },
@@ -73,7 +76,8 @@ const vivencias = [
     id: 7,
     title: "Roda de Violão",
     image: vivenciaRodaViolao,
-    description: "A Roda de Violão é uma vivência coletiva onde os participantes tocam e cantam juntos músicas populares brasileiras e internacionais. É uma forma descontraída de praticar acordes, ritmos e repertório, além de criar laços com outros apaixonados pelo instrumento.",
+    icon: Guitar,
+    description: "A Roda de Violão é uma vivência coletiva onde os participantes tocam e cantam juntos músicas populares brasileiras e internacionais.\n\nUma forma descontraída de praticar acordes, ritmos e repertório, além de criar laços com outros apaixonados pelo instrumento.",
     quando: "Sextas-feiras à tarde",
     duracao: "1h30",
   },
@@ -82,6 +86,7 @@ const vivencias = [
 export default function Vivencias() {
   return (
     <main className="min-h-screen bg-background">
+      {/* Header */}
       <section className="py-16 md:py-24 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
@@ -89,19 +94,35 @@ export default function Vivencias() {
               Nossas Vivências
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-sans">
-              Experiências musicais únicas que vão além das aulas tradicionais.
-              Participe de momentos especiais de aprendizado, troca e conexão através da música.
+              A Chorus oferece diversidade de vivências de acordo com o nível de cada aluno,
+              com uma finalidade muito mais ampla do que apenas "mostrar o que foi aprendido".
+              Essas vivências são ferramentas fundamentais no processo de formação artística,
+              pessoal e profissional — um espaço de prática real de performance.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Texto introdutório sobre importância das vivências */}
+      <section className="py-12 bg-background border-b border-border/30">
+        <div className="max-w-4xl mx-auto px-4 md:px-8">
+          <p className="text-muted-foreground leading-relaxed font-sans text-center">
+            Diferente da sala de aula, o palco traz desafios como superar o nervosismo, melhorar a
+            concentração e a interação com o público. Esses desafios ajudam o aluno a desenvolver
+            segurança e presença cênica, aprender a comunicar emoções e construir uma identidade
+            musical própria. Ter um evento como objetivo dá sentido ao estudo diário, estimulando
+            disciplina, organização e comprometimento.
+          </p>
+        </div>
+      </section>
+
+      {/* Lista de vivências */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="space-y-16">
+          <div className="space-y-12">
             {vivencias.map((vivencia) => {
-              const IconComponent = (vivencia as any).icon;
-              const isHighlight = (vivencia as any).highlight;
+              const IconComponent = vivencia.icon;
+              const isHighlight = vivencia.highlight;
 
               return (
                 <Card
@@ -117,49 +138,62 @@ export default function Vivencias() {
                       />
                     </div>
                   ) : (
-                    <div className="aspect-video overflow-hidden bg-primary/5 flex items-center justify-center">
-                      {IconComponent && (
-                        <IconComponent className="h-24 w-24 text-primary/30" />
-                      )}
+                    <div className="h-32 overflow-hidden bg-primary/5 flex items-center justify-center">
+                      <IconComponent className="h-16 w-16 text-primary/20" />
                     </div>
                   )}
+
                   <CardContent className="p-8 lg:p-12">
-                    <div className="flex items-center gap-3 mb-4">
-                      {isHighlight && (
+                    {/* Tag */}
+                    {isHighlight && (
+                      <div className="mb-4">
                         <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary text-primary-foreground">
-                          Curso Bônus Complementar
+                          {vivencia.tag}
                         </span>
-                      )}
-                    </div>
+                      </div>
+                    )}
+
                     <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-foreground">
                       {vivencia.title}
                     </h2>
-                    <p className="text-muted-foreground mb-8 leading-relaxed font-sans">
-                      {vivencia.description}
-                    </p>
+
+                    {/* Descrição com suporte a quebras de linha e bullets */}
+                    <div className="text-muted-foreground mb-8 leading-relaxed font-sans space-y-3">
+                      {vivencia.description.split('\n\n').map((paragraph, i) => {
+                        if (paragraph.startsWith('•')) {
+                          return (
+                            <ul key={i} className="space-y-1 pl-4">
+                              {paragraph.split('\n').map((line, j) => (
+                                <li key={j} className="flex items-start gap-2">
+                                  <span className="text-primary mt-1">•</span>
+                                  <span>{line.replace('• ', '')}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          );
+                        }
+                        return <p key={i}>{paragraph}</p>;
+                      })}
+                    </div>
+
+                    {/* Info de quando e duração */}
                     <div className="flex flex-wrap gap-4">
                       <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-foreground">
                         <Calendar className="h-4 w-4 text-primary" />
-                        <span className="font-medium font-sans">{vivencia.quando}</span>
+                        <span className="font-medium font-sans text-sm">{vivencia.quando}</span>
                       </div>
                       <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-foreground">
                         <Clock className="h-4 w-4 text-primary" />
-                        <span className="font-medium font-sans">Duração: {vivencia.duracao}</span>
+                        <span className="font-medium font-sans text-sm">Duração: {vivencia.duracao}</span>
                       </div>
                     </div>
-                    {isHighlight && (
-                      <div className="mt-6">
-                        <Link to="/#musicando">
-                          <Button variant="outline">Saiba mais sobre o Musicando</Button>
-                        </Link>
-                      </div>
-                    )}
                   </CardContent>
                 </Card>
               );
             })}
           </div>
 
+          {/* CTA */}
           <div className="text-center mt-16">
             <p className="text-lg text-muted-foreground mb-6 font-sans">
               Quer participar de uma de nossas vivências?
