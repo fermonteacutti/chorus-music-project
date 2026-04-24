@@ -1,6 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Music, Star, Mic, Guitar, Users, Trophy, Drum } from "lucide-react";
+import { Calendar, Clock, Music, Star, Mic, Guitar, Users, Trophy } from "lucide-react";
+import vivenciaMusicando from "@/assets/vivencia-musicando.webp";
+import vivenciaSaraus from "@/assets/vivencia-saraus.webp";
+import vivenciaChorusShow from "@/assets/vivencia-chorus-show.webp";
+import vivenciaFestivalChorus from "@/assets/vivencia-festival-chorus.webp";
 import vivenciaMusicalizacao from "@/assets/vivencia-musicalizacao.png";
 import vivenciaCoral from "@/assets/vivencia-coral.png";
 import vivenciaJam from "@/assets/vivencia-jam.png";
@@ -10,7 +14,7 @@ const vivencias = [
   {
     id: 0,
     title: "Musicando",
-    image: null,
+    image: vivenciaMusicando,
     icon: Music,
     tag: "Incluso na Matrícula",
     description: "Conexão entre Experiência, Emoção e Convivência.\n\nSem nenhum custo adicional, o Musicando complementa o aprendizado de forma lúdica, fortalece seu desenvolvimento em grupo e prepara para eventos e experiências marcantes.\n\nO Musicando é mais do que um curso extra — ele complementa e conecta seu aprendizado individual à prática em grupo, desenvolvendo habilidades que vão além da técnica.\n\nParticipar do Musicando ajuda você a:\n• Desenvolver percepção musical, escuta ativa e ritmo em conjunto;\n• Aprender a se conectar com outros músicos, como em uma banda ou grupo instrumental;\n• Superar o medo de errar e ganhar confiança ao tocar com outras pessoas;\n• Fortalecer vínculos sociais e emocionais através da música.",
@@ -21,7 +25,7 @@ const vivencias = [
   {
     id: 1,
     title: "Saraus",
-    image: null,
+    image: vivenciaSaraus,
     icon: Mic,
     description: "Apresentações individuais ou com formações variadas que acontecem em nossa sala própria de eventos (Sala Bebeto von Buettner) com som e iluminação profissionais, em duas temporadas anuais no final de cada semestre.\n\nAlém de compartilhar o aprendizado com familiares e amigos, os Saraus também preparam o aluno para outros formatos de apresentações em espaços maiores.",
     quando: "Final de cada semestre",
@@ -30,7 +34,7 @@ const vivencias = [
   {
     id: 2,
     title: "Chorus Show",
-    image: null,
+    image: vivenciaChorusShow,
     icon: Star,
     description: "Apresentação com formação de bandas que acontece no final de cada semestre em espaços externos para shows e música ao vivo.\n\nUma experiência real de palco que desenvolve presença cênica, trabalho em equipe e confiança musical.",
     quando: "Semestral",
@@ -39,7 +43,7 @@ const vivencias = [
   {
     id: 3,
     title: "Festival Chorus",
-    image: null,
+    image: vivenciaFestivalChorus,
     icon: Trophy,
     description: "Apresentação com formação de bandas em teatros, com produção profissional que leva a música dos nossos alunos para além dos muros da escola.\n\nUma oportunidade única de vivenciar a experiência real de um show, desenvolvendo habilidades de performance, presença de palco e trabalho em equipe.",
     quando: "Anual",
@@ -103,7 +107,7 @@ export default function Vivencias() {
         </div>
       </section>
 
-      {/* Texto introdutório sobre importância das vivências */}
+      {/* Texto introdutório */}
       <section className="py-12 bg-background border-b border-border/30">
         <div className="max-w-4xl mx-auto px-4 md:px-8">
           <p className="text-muted-foreground leading-relaxed font-sans text-center">
@@ -122,7 +126,7 @@ export default function Vivencias() {
           <div className="space-y-12">
             {vivencias.map((vivencia) => {
               const IconComponent = vivencia.icon;
-              const isHighlight = vivencia.highlight;
+              const isHighlight = (vivencia as any).highlight;
 
               return (
                 <Card
@@ -144,11 +148,10 @@ export default function Vivencias() {
                   )}
 
                   <CardContent className="p-8 lg:p-12">
-                    {/* Tag */}
                     {isHighlight && (
                       <div className="mb-4">
                         <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary text-primary-foreground">
-                          {vivencia.tag}
+                          {(vivencia as any).tag}
                         </span>
                       </div>
                     )}
@@ -157,7 +160,6 @@ export default function Vivencias() {
                       {vivencia.title}
                     </h2>
 
-                    {/* Descrição com suporte a quebras de linha e bullets */}
                     <div className="text-muted-foreground mb-8 leading-relaxed font-sans space-y-3">
                       {vivencia.description.split('\n\n').map((paragraph, i) => {
                         if (paragraph.startsWith('•')) {
@@ -176,7 +178,6 @@ export default function Vivencias() {
                       })}
                     </div>
 
-                    {/* Info de quando e duração */}
                     <div className="flex flex-wrap gap-4">
                       <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-foreground">
                         <Calendar className="h-4 w-4 text-primary" />
@@ -193,7 +194,6 @@ export default function Vivencias() {
             })}
           </div>
 
-          {/* CTA */}
           <div className="text-center mt-16">
             <p className="text-lg text-muted-foreground mb-6 font-sans">
               Quer participar de uma de nossas vivências?
