@@ -84,7 +84,7 @@ const allProfessionals: Professional[] = [
     bio: "Formado em Piano pelo Conservatório Musical Campinas e em Licenciatura em Educação Musical pela UFSCar. Atua como Pianista e Organista em eventos e corais de igrejas em Campinas. Na Chorus, é professor de Piano, Teclado e Flauta Doce desde 2001.",
     initials: "RW",
     photo: imgRoberval,
-    photoPosition: "object-[center_40%]",
+    photoPosition: "object-[center_65%]",
   },
   {
     id: 7,
