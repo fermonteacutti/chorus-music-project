@@ -48,7 +48,7 @@ const allProfessionals: Professional[] = [
     bio: "Bacharel em Guitarra Elétrica pela UNICAMP e mestre em Educação Musical. Compositor, arranjador e guitarrista com experiência em Pop, Rock, MPB, Jazz e Choro. Integra o corpo docente da Chorus desde 2008, onde também exerce a função de coordenador pedagógico. Lançou seu álbum autoral Entrelaços.",
     initials: "TZ",
     photo: imgTadeu,
-    photoPosition: "object-top",
+    photoPosition: "object-[center_5%]",
   },
   {
     id: 3,
@@ -84,7 +84,7 @@ const allProfessionals: Professional[] = [
     bio: "Formado em Piano pelo Conservatório Musical Campinas e em Licenciatura em Educação Musical pela UFSCar. Atua como Pianista e Organista em eventos e corais de igrejas em Campinas. Na Chorus, é professor de Piano, Teclado e Flauta Doce desde 2001.",
     initials: "RW",
     photo: imgRoberval,
-    photoPosition: "object-[center_20%]",
+    photoPosition: "object-[center_40%]",
   },
   {
     id: 7,
