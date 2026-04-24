@@ -15,11 +15,16 @@ export default function ManifestoSection() {
 
           <div className="bg-background rounded-xl p-8 md:p-12 shadow-sm border border-primary/10">
             <p className="text-lg md:text-xl text-foreground leading-relaxed font-sans">
-              A música é linguagem universal — mas aqui, ela é também caminho pessoal.
-              Na Chorus, cada voz importa. Cada nota encontra espaço. Cada aluno é mais
-              do que aluno: é artista em formação. Acreditamos que ensinar música é ensinar
-              a escutar — a si, ao outro, ao mundo. Por isso, construímos um ambiente onde
-              afeto e excelência caminham juntos.
+              A música é uma linguagem universal, mas aqui ela é também um caminho pessoal.
+              Na Chorus, cada voz importa, cada nota encontra espaço, cada aluno é mais do que
+              aluno: é artista em desenvolvimento. Acreditamos que ensinar música é ensinar a
+              escutar a si mesmo, ao outro e ao mundo. Por isso, construímos um ambiente onde
+              afeto e excelência caminham junto com a técnica, ritmo, expressão e propósito —
+              porque música é liberdade e aqui, ela acontece com verdade.
+            </p>
+            <p className="text-lg md:text-xl text-foreground leading-relaxed font-sans mt-6">
+              Desde 1993, seguimos acreditando que a música pode transformar não só carreiras,
+              mas a qualidade de vida e o crescimento humano.
             </p>
           </div>
 
