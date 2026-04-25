@@ -1,3 +1,8 @@
+useSEO({
+  title: "Blog de Música | Chorus Escola de Música Campinas",
+  description: "Dicas, novidades e conteúdos sobre música e educação musical. Aprenda com os professores da Chorus Escola de Música de Campinas.",
+  canonical: "https://chorus-music-project.pages.dev/blog",
+});
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";

@@ -1,3 +1,8 @@
+useSEO({
+  title: "Galeria | Chorus Escola de Música Campinas",
+  description: "Conheça a infraestrutura da Chorus Escola de Música. Salas equipadas, auditório profissional e ambiente inspirador em Campinas desde 1993.",
+  canonical: "https://chorus-music-project.pages.dev/galeria",
+});
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 

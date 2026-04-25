@@ -1,3 +1,8 @@
+useSEO({
+  title: "Contato | Chorus Escola de Música Campinas",
+  description: "Entre em contato com a Chorus Escola de Música. Av. José Bonifácio, 2304 - Campinas SP. WhatsApp: (19) 99213-8954. Agende sua aula experimental.",
+  canonical: "https://chorus-music-project.pages.dev/contato",
+});
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

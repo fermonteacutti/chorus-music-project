@@ -1,3 +1,13 @@
+import { useSEO } from "@/hooks/useSEO";
+
+export default function Home() {
+  useSEO({
+    title: "Chorus Escola de Música | Desde 1993 em Campinas",
+    description: "Escola de música em Campinas desde 1993. Cursos de piano, violão, canto, bateria, musicalização infantil e mais. Agende sua aula experimental.",
+    canonical: "https://chorus-music-project.pages.dev/",
+  });
+  return ( ... )
+}
 import HeroSection from "@/components/HeroSection";
 import HistorySection from "@/components/HistorySection";
 import ManifestoSection from "@/components/ManifestoSection";

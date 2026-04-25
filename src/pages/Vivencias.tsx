@@ -1,3 +1,8 @@
+useSEO({
+  title: "Vivências Musicais | Chorus Escola de Música Campinas",
+  description: "Saraus, Chorus Show, Festival, Jam Session, Coral e muito mais. Experiências musicais reais para alunos de todos os níveis em Campinas.",
+  canonical: "https://chorus-music-project.pages.dev/vivencias",
+});
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Music, Star, Mic, Guitar, Users, Trophy } from "lucide-react";
