@@ -1,13 +1,8 @@
-useSEO({
-  title: "Cursos de Música em Campinas | Chorus Escola de Música",
-  description: "Piano, violão, guitarra, canto, bateria, musicalização infantil e mais. Metodologia personalizada para todas as idades. Conheça os cursos da Chorus.",
-  canonical: "https://chorus-music-project.pages.dev/cursos",
-});
+import { useSEO } from "@/hooks/useSEO";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Music, Guitar, Mic, Drum, Piano, Users, BookOpen, Calendar, Video, Home, Shuffle, Wind, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-
 const courseGroups = [
   {
     group: "Cordas",
@@ -54,6 +49,12 @@ const courseGroups = [
 ];
 
 export default function Cursos() {
+  useSEO({
+    title: "Cursos de Música em Campinas | Chorus Escola de Música",
+    description: "Piano, violão, guitarra, canto, bateria, musicalização infantil e mais. Metodologia personalizada para todas as idades. Conheça os cursos da Chorus.",
+    canonical: "https://chorus-music-project.pages.dev/cursos",
+  });
+
   return (
     <div className="min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-8">

@@ -1,8 +1,4 @@
-useSEO({
-  title: "Contato | Chorus Escola de Música Campinas",
-  description: "Entre em contato com a Chorus Escola de Música. Av. José Bonifácio, 2304 - Campinas SP. WhatsApp: (19) 99213-8954. Agende sua aula experimental.",
-  canonical: "https://chorus-music-project.pages.dev/contato",
-});
+import { useSEO } from "@/hooks/useSEO";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,6 +8,12 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function Contato() {
+  useSEO({
+    title: "Contato | Chorus Escola de Música Campinas",
+    description: "Entre em contato com a Chorus Escola de Música. Av. José Bonifácio, 2304 - Campinas SP. WhatsApp: (19) 99213-8954. Agende sua aula experimental.",
+    canonical: "https://chorus-music-project.pages.dev/contato",
+  });
+  
   const { toast } = useToast();
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
 

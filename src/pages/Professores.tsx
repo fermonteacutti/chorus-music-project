@@ -1,8 +1,4 @@
-useSEO({
-  title: "Professores de Música em Campinas | Chorus Escola de Música",
-  description: "Equipe de professores com formação acadêmica e ampla experiência musical. Conheça os profissionais da Chorus Escola de Música em Campinas.",
-  canonical: "https://chorus-music-project.pages.dev/professores",
-});
+import { useSEO } from "@/hooks/useSEO";
 import imgRosa from "@/assets/professores/rosa.webp";
 import imgCecilia from "@/assets/professores/cecilia-2025.webp";
 import imgMarilene from "@/assets/professores/marilene.webp";
@@ -238,6 +234,11 @@ const allProfessionals: Professional[] = [
 ];
 
 export default function Professores() {
+  useSEO({
+    title: "Professores de Música em Campinas | Chorus Escola de Música",
+    description: "Equipe de professores com formação acadêmica e ampla experiência musical. Conheça os profissionais da Chorus Escola de Música em Campinas.",
+    canonical: "https://chorus-music-project.pages.dev/professores",
+  });
   return (
     <div className="min-h-screen py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
